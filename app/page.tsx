@@ -161,7 +161,12 @@ export default function Home() {
         <ExperienceSection />
 
         {/* Rodapé */}
-        <footer className="animate-fade-up delay-1000 text-center pb-4">
+        <footer className="animate-fade-up delay-1000 text-center pt-10 pb-6 mt-4">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+            <div className="w-1 h-1 rounded-full bg-primary/40" />
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+          </div>
           <p className="text-[11px] text-muted-foreground/70 tracking-wide">
             &copy; {new Date().getFullYear()} William Teixeira &mdash; Natal, RN
           </p>
