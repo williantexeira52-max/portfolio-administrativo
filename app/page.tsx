@@ -83,7 +83,7 @@ const links = [
 export default function Home() {
   return (
     <IntroWrapper>
-    <main className="relative min-h-screen flex items-start justify-center px-5 py-14 bg-background overflow-hidden">
+    <main className="relative min-h-screen flex items-start justify-center px-4 sm:px-6 py-10 sm:py-14 bg-background overflow-x-hidden">
 
       {/* ── Orb 1: topo centro ── */}
       <div
@@ -114,7 +114,7 @@ export default function Home() {
       />
 
       {/* ── Conteúdo ── */}
-      <div className="relative z-10 w-full max-w-sm flex flex-col gap-8">
+      <div className="relative z-10 w-full max-w-[420px] flex flex-col gap-6 sm:gap-8">
 
         {/* Perfil */}
         <ProfileCard />

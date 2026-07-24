@@ -22,7 +22,7 @@ export function ProfileCard() {
           }}
         />
         {/* Foto */}
-        <div className="relative w-36 h-36 rounded-full overflow-hidden ring-[3px] ring-background">
+        <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-[3px] ring-background">
           <Image
             src="/william-real.png"
             alt="Foto de perfil de William Teixeira"
@@ -43,12 +43,12 @@ export function ProfileCard() {
       {/* Nome e cargo */}
       <div className="space-y-2 mt-2">
         <h1
-          className="font-serif text-4xl font-bold tracking-tight text-foreground text-balance leading-tight animate-fade-up delay-100"
+          className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-foreground text-balance leading-tight animate-fade-up delay-100"
           style={{ textShadow: '0 0 40px oklch(0.78 0.13 75 / 0.15)' }}
         >
           William Teixeira
         </h1>
-        <p className="text-xs font-semibold tracking-[0.25em] uppercase text-primary animate-fade-up delay-200">
+        <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] sm:tracking-[0.25em] uppercase text-primary animate-fade-up delay-200">
           Coordenador Administrativo &amp; RH
         </p>
         <p className="text-sm text-muted-foreground flex items-center justify-center gap-1.5 animate-fade-up delay-300">
