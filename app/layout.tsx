@@ -1,36 +1,41 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: 'William Teixeira — Coordenador Administrativo & RH',
+  description:
+    'Portfólio profissional de William Teixeira, Coordenador Administrativo com experiência em RH, Departamento Pessoal e Secretaria Escolar. Natal, RN.',
+  keywords: [
+    'William Teixeira',
+    'Coordenador Administrativo',
+    'RH',
+    'Recursos Humanos',
+    'Natal RN',
+    'Departamento Pessoal',
+  ],
+  openGraph: {
+    title: 'William Teixeira — Coordenador Administrativo & RH',
+    description:
+      'Profissional com 9+ anos de experiência em administração, RH e educação.',
+    type: 'website',
   },
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'dark',
+  themeColor: '#1c1a17',
 }
 
 export default function RootLayout({
@@ -39,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="pt-BR" className={`${inter.variable} ${playfair.variable} bg-background`}>
+      <body className="antialiased font-sans">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
