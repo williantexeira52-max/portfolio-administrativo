@@ -135,7 +135,7 @@ export default function Home() {
         {/* Links */}
         <section className="w-full space-y-3">
           <div className="animate-fade-up delay-600 flex items-center gap-3">
-            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground/70">
+            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
               Conecte-se
             </h2>
             <div className="flex-1 h-px bg-border/40" />
@@ -162,7 +162,7 @@ export default function Home() {
 
         {/* Rodapé */}
         <footer className="animate-fade-up delay-1000 text-center pb-4">
-          <p className="text-[11px] text-muted-foreground/40 tracking-wide">
+          <p className="text-[11px] text-muted-foreground/70 tracking-wide">
             &copy; {new Date().getFullYear()} William Teixeira &mdash; Natal, RN
           </p>
         </footer>

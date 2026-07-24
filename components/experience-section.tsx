@@ -97,16 +97,30 @@ export function ExperienceSection() {
       <div className="relative">
         {/* Linha vertical */}
         <div
-          className="absolute left-[15px] top-4 bottom-16 w-px pointer-events-none"
+          className="absolute left-[15px] top-4 bottom-16 w-px pointer-events-none overflow-hidden"
           style={{
             background:
-              'linear-gradient(to bottom, oklch(0.78 0.13 75 / 0.7) 0%, oklch(0.78 0.13 75 / 0.15) 85%, transparent 100%)',
+              'linear-gradient(to bottom, oklch(0.78 0.13 75 / 0.7) 0%, oklch(0.78 0.13 75 / 0.2) 85%, transparent 100%)',
           }}
-        />
+        >
+          {/* Luz que percorre a linha */}
+          <div
+            className="animate-timeline-travel absolute left-0 w-px h-8"
+            style={{
+              background:
+                'linear-gradient(to bottom, transparent, oklch(0.88 0.12 90), transparent)',
+              boxShadow: '0 0 8px 1px oklch(0.85 0.13 80 / 0.8)',
+            }}
+          />
+        </div>
 
         <div className="space-y-2.5">
           {experiences.map((exp, index) => (
-            <div key={index} className="flex gap-4 relative group">
+            <div
+              key={index}
+              className="flex gap-4 relative group animate-slide-in-left"
+              style={{ animationDelay: `${900 + index * 90}ms` }}
+            >
 
               {/* Ponto / Dot */}
               <div className="shrink-0 flex flex-col items-center" style={{ paddingTop: '14px' }}>
@@ -141,10 +155,10 @@ export function ExperienceSection() {
               {/* Conteúdo */}
               <div className="flex-1 pb-1">
                 <div
-                  className={`rounded-2xl px-4 py-3.5 transition-all duration-300 ${
+                  className={`rounded-2xl px-4 py-3.5 transition-all duration-300 group-hover:-translate-y-0.5 ${
                     exp.current
-                      ? 'border group-hover:shadow-[0_0_24px_oklch(0.78_0.13_75/0.12)]'
-                      : 'border group-hover:border-primary/20 group-hover:bg-card/90'
+                      ? 'border group-hover:shadow-[0_8px_28px_oklch(0.78_0.13_75/0.14)]'
+                      : 'border group-hover:border-primary/25 group-hover:bg-card/90 group-hover:shadow-[0_8px_24px_oklch(0_0_0/0.35)]'
                   }`}
                   style={
                     exp.current
@@ -162,9 +176,7 @@ export function ExperienceSection() {
                   {/* Topo: cargo + badge */}
                   <div className="flex items-start justify-between gap-2 mb-1.5">
                     <p
-                      className={`text-sm font-semibold leading-snug text-pretty flex-1 ${
-                        exp.current ? 'text-foreground' : 'text-foreground/85'
-                      }`}
+                      className="text-sm font-semibold leading-snug text-pretty flex-1 text-foreground"
                     >
                       {exp.role}
                     </p>
@@ -185,7 +197,7 @@ export function ExperienceSection() {
                   {/* Empresa */}
                   <p
                     className={`text-xs leading-relaxed ${
-                      exp.current ? 'text-foreground/70' : 'text-muted-foreground/70'
+                      exp.current ? 'text-foreground/85' : 'text-muted-foreground'
                     }`}
                   >
                     {exp.company}
@@ -194,13 +206,13 @@ export function ExperienceSection() {
                   {/* Período + localização */}
                   <div className="flex items-center gap-3 mt-2 flex-wrap">
                     <span
-                      className="text-[11px] font-medium tabular-nums"
-                      style={{ color: exp.current ? 'oklch(0.78 0.13 75 / 0.9)' : 'oklch(1 0 0 / 0.35)' }}
+                      className="text-[11px] font-semibold tabular-nums"
+                      style={{ color: exp.current ? 'oklch(0.82 0.13 78)' : 'oklch(0.7 0.012 60)' }}
                     >
                       {exp.period}
                     </span>
                     {exp.location && (
-                      <span className="flex items-center gap-1 text-[11px] text-muted-foreground/50">
+                      <span className="flex items-center gap-1 text-[11px] text-muted-foreground/80">
                         <MapPinIcon className="w-2.5 h-2.5" />
                         {exp.location}
                       </span>
@@ -263,7 +275,7 @@ export function ExperienceSection() {
             <p className="text-sm font-semibold text-foreground leading-snug">
               Expansão para Curitiba, PR
             </p>
-            <p className="text-xs text-muted-foreground/70 mt-1 leading-relaxed">
+            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
               Planejamento de atuação profissional em Curitiba a partir de 2027, ampliando o alcance de carreira para o mercado do Sul do Brasil.
             </p>
           </div>

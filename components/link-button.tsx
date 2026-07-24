@@ -75,7 +75,7 @@ export function LinkButton({
         {sublabel && (
           <span
             className={`block text-xs mt-0.5 truncate ${
-              isPrimary ? 'text-primary-foreground/65' : 'text-muted-foreground'
+              isPrimary ? 'text-primary-foreground/75' : 'text-muted-foreground'
             }`}
           >
             {sublabel}

@@ -64,7 +64,7 @@
   --secondary-foreground: oklch(0.95 0.008 60);
 
   --muted: oklch(0.18 0.006 60);
-  --muted-foreground: oklch(0.52 0.01 60);
+  --muted-foreground: oklch(0.72 0.012 60);
 
   --accent: oklch(0.20 0.007 60);
   --accent-foreground: oklch(0.95 0.008 60);
@@ -141,6 +141,20 @@
   50%       { transform: translateY(-6px); }
 }
 
+/* Luz que percorre a linha do tempo */
+@keyframes timeline-travel {
+  0%   { transform: translateY(-10%); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateY(1100%); opacity: 0; }
+}
+
+/* Entrada lateral suave dos itens */
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 .animate-fade-up {
   animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -167,6 +181,14 @@
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
+}
+
+.animate-timeline-travel {
+  animation: timeline-travel 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* Delays para animações escalonadas */
