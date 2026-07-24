@@ -2,6 +2,7 @@ import { ProfileCard } from '@/components/profile-card'
 import { LinkButton } from '@/components/link-button'
 import { ExperienceSection } from '@/components/experience-section'
 import { StatsSection } from '@/components/stats-section'
+import { IntroWrapper } from '@/components/intro-wrapper'
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -81,6 +82,7 @@ const links = [
 
 export default function Home() {
   return (
+    <IntroWrapper>
     <main className="relative min-h-screen flex items-start justify-center px-5 py-14 bg-background overflow-hidden">
 
       {/* ── Orb 1: topo centro ── */}
@@ -167,5 +169,6 @@ export default function Home() {
 
       </div>
     </main>
+    </IntroWrapper>
   )
 }
