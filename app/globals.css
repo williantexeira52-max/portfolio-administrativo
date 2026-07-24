@@ -48,49 +48,46 @@
 :root {
   color-scheme: dark;
 
-  /* Backgrounds — carvão profundo */
-  --background: oklch(0.11 0.005 60);
-  --foreground: oklch(0.93 0.01 60);
+  --background: oklch(0.09 0.004 60);
+  --foreground: oklch(0.95 0.008 60);
 
-  --card: oklch(0.16 0.006 60);
-  --card-foreground: oklch(0.93 0.01 60);
+  --card: oklch(0.13 0.005 60);
+  --card-foreground: oklch(0.95 0.008 60);
 
-  --popover: oklch(0.16 0.006 60);
-  --popover-foreground: oklch(0.93 0.01 60);
+  --popover: oklch(0.13 0.005 60);
+  --popover-foreground: oklch(0.95 0.008 60);
 
-  /* Dourado elegante */
-  --primary: oklch(0.78 0.12 75);
-  --primary-foreground: oklch(0.11 0.005 60);
+  --primary: oklch(0.78 0.13 75);
+  --primary-foreground: oklch(0.09 0.004 60);
 
-  --secondary: oklch(0.20 0.006 60);
-  --secondary-foreground: oklch(0.93 0.01 60);
+  --secondary: oklch(0.18 0.006 60);
+  --secondary-foreground: oklch(0.95 0.008 60);
 
-  --muted: oklch(0.20 0.006 60);
-  --muted-foreground: oklch(0.58 0.01 60);
+  --muted: oklch(0.18 0.006 60);
+  --muted-foreground: oklch(0.52 0.01 60);
 
-  --accent: oklch(0.22 0.008 60);
-  --accent-foreground: oklch(0.93 0.01 60);
+  --accent: oklch(0.20 0.007 60);
+  --accent-foreground: oklch(0.95 0.008 60);
 
   --destructive: oklch(0.65 0.22 27);
 
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.78 0.12 75 / 50%);
+  --border: oklch(1 0 0 / 7%);
+  --input: oklch(1 0 0 / 9%);
+  --ring: oklch(0.78 0.13 75 / 40%);
 
-  /* Ouro personalizado */
-  --gold: oklch(0.78 0.12 75);
-  --gold-muted: oklch(0.78 0.12 75 / 20%);
+  --gold: oklch(0.78 0.13 75);
+  --gold-muted: oklch(0.78 0.13 75 / 15%);
 
-  --radius: 0.75rem;
+  --radius: 0.875rem;
 
-  --sidebar: oklch(0.16 0.006 60);
-  --sidebar-foreground: oklch(0.93 0.01 60);
-  --sidebar-primary: oklch(0.78 0.12 75);
-  --sidebar-primary-foreground: oklch(0.11 0.005 60);
-  --sidebar-accent: oklch(0.20 0.006 60);
-  --sidebar-accent-foreground: oklch(0.93 0.01 60);
-  --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.78 0.12 75 / 50%);
+  --sidebar: oklch(0.13 0.005 60);
+  --sidebar-foreground: oklch(0.95 0.008 60);
+  --sidebar-primary: oklch(0.78 0.13 75);
+  --sidebar-primary-foreground: oklch(0.09 0.004 60);
+  --sidebar-accent: oklch(0.18 0.006 60);
+  --sidebar-accent-foreground: oklch(0.95 0.008 60);
+  --sidebar-border: oklch(1 0 0 / 7%);
+  --sidebar-ring: oklch(0.78 0.13 75 / 40%);
 }
 
 @layer base {
@@ -101,3 +98,86 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 }
+
+/* ─── Animações personalizadas ─── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease both;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.2s ease infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-dot-pulse {
+  animation: dot-pulse 1.8s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Delays para animações escalonadas */
+.delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }

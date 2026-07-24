@@ -1,3 +1,8 @@
+import { ProfileCard } from '@/components/profile-card'
+import { LinkButton } from '@/components/link-button'
+import { ExperienceSection } from '@/components/experience-section'
+import { StatsSection } from '@/components/stats-section'
+
 function LinkedinIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -47,28 +52,6 @@ function FileDownIcon({ className }: { className?: string }) {
   )
 }
 
-function ArrowUpRightIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M7 7h10v10" />
-      <path d="M7 17 17 7" />
-    </svg>
-  )
-}
-import { ProfileCard } from '@/components/profile-card'
-import { LinkButton } from '@/components/link-button'
-import { ExperienceSection } from '@/components/experience-section'
-import { StatsSection } from '@/components/stats-section'
-
 const links = [
   {
     href: 'https://www.linkedin.com/in/williamtexeira/',
@@ -76,13 +59,15 @@ const links = [
     sublabel: 'linkedin.com/in/williamtexeira',
     icon: <LinkedinIcon className="w-5 h-5" />,
     variant: 'primary' as const,
+    delay: 'delay-700',
   },
   {
-    href: 'https://www.instagram.com/',
+    href: 'https://www.instagram.com/williamteixeirac1',
     label: 'Instagram',
-    sublabel: '@williamtexeira',
+    sublabel: '@williamteixeirac1',
     icon: <InstagramIcon className="w-5 h-5" />,
     variant: 'default' as const,
+    delay: 'delay-800',
   },
   {
     href: '#',
@@ -90,57 +75,96 @@ const links = [
     sublabel: 'Currículo atualizado em PDF',
     icon: <FileDownIcon className="w-5 h-5" />,
     variant: 'default' as const,
+    delay: 'delay-900',
   },
 ]
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-start justify-center px-4 py-12 bg-background">
-      {/* Noise texture overlay sutil */}
-      <div
-        className="fixed inset-0 pointer-events-none opacity-[0.025]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        }}
-      />
+    <main className="relative min-h-screen flex items-start justify-center px-5 py-14 bg-background overflow-hidden">
 
-      {/* Brilho de fundo suave */}
+      {/* ── Orb 1: topo centro ── */}
       <div
-        className="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none"
+        className="fixed top-[-120px] left-1/2 -translate-x-1/2 w-[480px] h-[480px] rounded-full pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at center, oklch(0.78 0.12 75 / 0.06) 0%, transparent 70%)',
+            'radial-gradient(circle, oklch(0.78 0.13 75 / 0.07) 0%, transparent 65%)',
+          filter: 'blur(40px)',
         }}
       />
 
-      <div className="relative w-full max-w-sm flex flex-col gap-8">
-        {/* Cabeçalho / Perfil */}
+      {/* ── Orb 2: canto inferior esquerdo ── */}
+      <div
+        className="fixed bottom-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle, oklch(0.78 0.13 75 / 0.05) 0%, transparent 65%)',
+          filter: 'blur(50px)',
+        }}
+      />
+
+      {/* ── Textura noise sutil ── */}
+      <div
+        className="fixed inset-0 pointer-events-none opacity-[0.018]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        }}
+      />
+
+      {/* ── Conteúdo ── */}
+      <div className="relative z-10 w-full max-w-sm flex flex-col gap-8">
+
+        {/* Perfil */}
         <ProfileCard />
+
+        {/* Divisor */}
+        <div className="animate-fade-up delay-500 flex items-center gap-4">
+          <div className="flex-1 h-px bg-border/50" />
+          <div
+            className="w-1.5 h-1.5 rounded-full"
+            style={{ background: 'oklch(0.78 0.13 75 / 0.5)' }}
+          />
+          <div className="flex-1 h-px bg-border/50" />
+        </div>
 
         {/* Estatísticas */}
         <StatsSection />
 
         {/* Links */}
         <section className="w-full space-y-3">
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground px-1">
-            Conecte-se
-          </h2>
-          <div className="flex flex-col gap-3">
+          <div className="animate-fade-up delay-600 flex items-center gap-3">
+            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground/70">
+              Conecte-se
+            </h2>
+            <div className="flex-1 h-px bg-border/40" />
+          </div>
+          <div className="flex flex-col gap-2.5">
             {links.map((link) => (
               <LinkButton key={link.href} {...link} />
             ))}
           </div>
         </section>
 
+        {/* Divisor */}
+        <div className="animate-fade-up delay-900 flex items-center gap-4">
+          <div className="flex-1 h-px bg-border/50" />
+          <div
+            className="w-1.5 h-1.5 rounded-full"
+            style={{ background: 'oklch(0.78 0.13 75 / 0.5)' }}
+          />
+          <div className="flex-1 h-px bg-border/50" />
+        </div>
+
         {/* Experiência */}
         <ExperienceSection />
 
         {/* Rodapé */}
-        <footer className="text-center pb-4">
-          <p className="text-xs text-muted-foreground/50">
-            &copy; {new Date().getFullYear()} William Teixeira — Natal, RN
+        <footer className="animate-fade-up delay-1000 text-center pb-4">
+          <p className="text-[11px] text-muted-foreground/40 tracking-wide">
+            &copy; {new Date().getFullYear()} William Teixeira &mdash; Natal, RN
           </p>
         </footer>
+
       </div>
     </main>
   )
