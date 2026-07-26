@@ -49,7 +49,7 @@ export function BlogSection() {
           <Reveal key={post.title} delay={i * 90}>
             <a href="#" className="group block h-full rounded-2xl border border-border/50 bg-card/50 overflow-hidden hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
               <PlaceholderBanner label={post.tag} aspect="aspect-[16/9]" className="rounded-none border-0 border-b border-border/50" />
-              <div className="p-4 space-y-2">
+              <div className="p-4 sm:p-5 space-y-2">
                 <span className="text-[10px] font-bold tracking-wider uppercase text-primary/80">
                   {post.tag}
                 </span>

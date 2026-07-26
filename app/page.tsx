@@ -3,6 +3,9 @@ import { LinkButton } from '@/components/link-button'
 import { ExperienceSection } from '@/components/experience-section'
 import { IntroWrapper } from '@/components/intro-wrapper'
 import { SiteNav } from '@/components/site-nav'
+import { ScrollProgress } from '@/components/scroll-progress'
+import { MarqueeStrip } from '@/components/marquee-strip'
+import { MobileTabBar } from '@/components/mobile-tab-bar'
 import { SigteoSection } from '@/components/sigteo-section'
 import { ProjectsSection } from '@/components/projects-section'
 import { GallerySection } from '@/components/gallery-section'
@@ -14,7 +17,6 @@ import { VideoSection } from '@/components/video-section'
 import { BlogSection } from '@/components/blog-section'
 import { LanguagesCertificatesSection } from '@/components/languages-certificates-section'
 import { DifferentialsSection } from '@/components/differentials-section'
-import { Reveal } from '@/components/reveal'
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -105,6 +107,7 @@ function Divider() {
 export default function Home() {
   return (
     <IntroWrapper>
+      <ScrollProgress />
       <SiteNav />
       <main className="relative min-h-screen bg-background overflow-x-hidden">
 
@@ -135,11 +138,11 @@ export default function Home() {
         />
 
         {/* ── Hero ── */}
-        <div className="relative z-10 px-4 sm:px-6 pt-24 sm:pt-32 pb-10">
+        <div className="relative z-10 px-5 sm:px-6 pt-24 sm:pt-32 pb-10">
           <div className="w-full max-w-[420px] mx-auto flex flex-col gap-6 sm:gap-8">
             <ProfileCard />
             <Divider />
-            <section className="w-full space-y-3">
+            <section id="contato" className="w-full space-y-3 scroll-mt-24">
               <div className="animate-fade-up delay-600 flex items-center gap-3">
                 <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
                   Conecte-se
@@ -155,30 +158,36 @@ export default function Home() {
           </div>
         </div>
 
+        {/* ── Faixa de destaque (marquee) ── */}
+        <div className="relative z-10 mb-14 sm:mb-20 animate-fade-in delay-700">
+          <MarqueeStrip />
+        </div>
+
         {/* ── Seções da landing page ── */}
-        <div className="relative z-10 px-4 sm:px-6 pb-16">
-          <div className="w-full max-w-5xl mx-auto flex flex-col gap-16 sm:gap-24">
+        <div className="relative z-10 px-5 sm:px-6 pb-16">
+          <div className="w-full max-w-5xl mx-auto flex flex-col gap-20 sm:gap-28">
+            <MetricsSection />
             <SigteoSection />
             <ProjectsSection />
             <GallerySection />
-            <MetricsSection />
-            <AchievementsSection />
             <SkillsSection />
-            <TestimonialsSection />
-            <VideoSection />
-            <BlogSection />
-            <LanguagesCertificatesSection />
-            <DifferentialsSection />
+            <AchievementsSection />
 
-            <div className="max-w-[420px] mx-auto w-full flex flex-col gap-16">
+            <div className="max-w-[420px] mx-auto w-full flex flex-col gap-20">
               <Divider />
               <ExperienceSection />
             </div>
+
+            <TestimonialsSection />
+            <DifferentialsSection />
+            <VideoSection />
+            <BlogSection />
+            <LanguagesCertificatesSection />
           </div>
         </div>
 
         {/* Rodapé */}
-        <footer className="relative z-10 animate-fade-up text-center pt-4 pb-10 px-4">
+        <footer className="relative z-10 animate-fade-up text-center pt-4 pb-24 md:pb-10 px-4">
           <div className="max-w-[420px] mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
@@ -192,6 +201,7 @@ export default function Home() {
         </footer>
 
       </main>
+      <MobileTabBar />
     </IntroWrapper>
   )
 }

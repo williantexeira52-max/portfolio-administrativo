@@ -67,7 +67,7 @@ export function ProjectsSection() {
           <Reveal key={project.name} delay={i * 80}>
             <div className="group h-full rounded-2xl border border-border/50 bg-card/50 overflow-hidden hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
               <PlaceholderBanner label={project.name} aspect="aspect-[16/9]" className="rounded-none border-0 border-b border-border/50" />
-              <div className="p-4 space-y-2">
+              <div className="p-4 sm:p-5 space-y-2">
                 <h3 className="font-semibold text-sm text-foreground">{project.name}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   {project.description}

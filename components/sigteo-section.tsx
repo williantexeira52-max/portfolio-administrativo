@@ -46,7 +46,7 @@ export function SigteoSection() {
               'linear-gradient(160deg, oklch(0.78 0.13 75 / 0.12), transparent 40%), oklch(0.14 0.008 60)',
           }}
         >
-          <div className="rounded-[22px] p-6 sm:p-9">
+          <div className="rounded-[22px] p-5 sm:p-9">
             {/* Selo de projeto principal */}
             <div className="flex items-center gap-2 mb-5">
               <div

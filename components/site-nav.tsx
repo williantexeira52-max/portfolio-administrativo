@@ -9,6 +9,7 @@ const links = [
   { href: '#habilidades', label: 'Habilidades' },
   { href: '#depoimentos', label: 'Depoimentos' },
   { href: '#blog', label: 'Blog' },
+  { href: '#contato', label: 'Contato' },
 ]
 
 function MenuIcon({ className }: { className?: string }) {
