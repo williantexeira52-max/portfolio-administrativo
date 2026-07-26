@@ -1,8 +1,20 @@
 import { ProfileCard } from '@/components/profile-card'
 import { LinkButton } from '@/components/link-button'
 import { ExperienceSection } from '@/components/experience-section'
-import { StatsSection } from '@/components/stats-section'
 import { IntroWrapper } from '@/components/intro-wrapper'
+import { SiteNav } from '@/components/site-nav'
+import { SigteoSection } from '@/components/sigteo-section'
+import { ProjectsSection } from '@/components/projects-section'
+import { GallerySection } from '@/components/gallery-section'
+import { AchievementsSection } from '@/components/achievements-section'
+import { SkillsSection } from '@/components/skills-section'
+import { MetricsSection } from '@/components/metrics-section'
+import { TestimonialsSection } from '@/components/testimonials-section'
+import { VideoSection } from '@/components/video-section'
+import { BlogSection } from '@/components/blog-section'
+import { LanguagesCertificatesSection } from '@/components/languages-certificates-section'
+import { DifferentialsSection } from '@/components/differentials-section'
+import { Reveal } from '@/components/reveal'
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -80,100 +92,106 @@ const links = [
   },
 ]
 
+function Divider() {
+  return (
+    <div className="flex items-center gap-4">
+      <div className="flex-1 h-px bg-border/50" />
+      <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'oklch(0.78 0.13 75 / 0.5)' }} />
+      <div className="flex-1 h-px bg-border/50" />
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <IntroWrapper>
-    <main className="relative min-h-screen flex items-start justify-center px-4 sm:px-6 py-10 sm:py-14 bg-background overflow-x-hidden">
+      <SiteNav />
+      <main className="relative min-h-screen bg-background overflow-x-hidden">
 
-      {/* ── Orb 1: topo centro ── */}
-      <div
-        className="fixed top-[-120px] left-1/2 -translate-x-1/2 w-[480px] h-[480px] rounded-full pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle, oklch(0.78 0.13 75 / 0.07) 0%, transparent 65%)',
-          filter: 'blur(40px)',
-        }}
-      />
+        {/* ── Orb 1: topo centro ── */}
+        <div
+          className="fixed top-[-120px] left-1/2 -translate-x-1/2 w-[480px] h-[480px] rounded-full pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.07) 0%, transparent 65%)',
+            filter: 'blur(40px)',
+          }}
+        />
 
-      {/* ── Orb 2: canto inferior esquerdo ── */}
-      <div
-        className="fixed bottom-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle, oklch(0.78 0.13 75 / 0.05) 0%, transparent 65%)',
-          filter: 'blur(50px)',
-        }}
-      />
+        {/* ── Orb 2: canto inferior esquerdo ── */}
+        <div
+          className="fixed bottom-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.05) 0%, transparent 65%)',
+            filter: 'blur(50px)',
+          }}
+        />
 
-      {/* ── Textura noise sutil ── */}
-      <div
-        className="fixed inset-0 pointer-events-none opacity-[0.018]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-        }}
-      />
+        {/* ── Textura noise sutil ── */}
+        <div
+          className="fixed inset-0 pointer-events-none opacity-[0.018]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+          }}
+        />
 
-      {/* ── Conteúdo ── */}
-      <div className="relative z-10 w-full max-w-[420px] flex flex-col gap-6 sm:gap-8">
-
-        {/* Perfil */}
-        <ProfileCard />
-
-        {/* Divisor */}
-        <div className="animate-fade-up delay-500 flex items-center gap-4">
-          <div className="flex-1 h-px bg-border/50" />
-          <div
-            className="w-1.5 h-1.5 rounded-full"
-            style={{ background: 'oklch(0.78 0.13 75 / 0.5)' }}
-          />
-          <div className="flex-1 h-px bg-border/50" />
+        {/* ── Hero ── */}
+        <div className="relative z-10 px-4 sm:px-6 pt-24 sm:pt-32 pb-10">
+          <div className="w-full max-w-[420px] mx-auto flex flex-col gap-6 sm:gap-8">
+            <ProfileCard />
+            <Divider />
+            <section className="w-full space-y-3">
+              <div className="animate-fade-up delay-600 flex items-center gap-3">
+                <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+                  Conecte-se
+                </h2>
+                <div className="flex-1 h-px bg-border/40" />
+              </div>
+              <div className="flex flex-col gap-2.5">
+                {links.map((link) => (
+                  <LinkButton key={link.href} {...link} />
+                ))}
+              </div>
+            </section>
+          </div>
         </div>
 
-        {/* Estatísticas */}
-        <StatsSection />
+        {/* ── Seções da landing page ── */}
+        <div className="relative z-10 px-4 sm:px-6 pb-16">
+          <div className="w-full max-w-5xl mx-auto flex flex-col gap-16 sm:gap-24">
+            <SigteoSection />
+            <ProjectsSection />
+            <GallerySection />
+            <MetricsSection />
+            <AchievementsSection />
+            <SkillsSection />
+            <TestimonialsSection />
+            <VideoSection />
+            <BlogSection />
+            <LanguagesCertificatesSection />
+            <DifferentialsSection />
 
-        {/* Links */}
-        <section className="w-full space-y-3">
-          <div className="animate-fade-up delay-600 flex items-center gap-3">
-            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
-              Conecte-se
-            </h2>
-            <div className="flex-1 h-px bg-border/40" />
+            <div className="max-w-[420px] mx-auto w-full flex flex-col gap-16">
+              <Divider />
+              <ExperienceSection />
+            </div>
           </div>
-          <div className="flex flex-col gap-2.5">
-            {links.map((link) => (
-              <LinkButton key={link.href} {...link} />
-            ))}
-          </div>
-        </section>
-
-        {/* Divisor */}
-        <div className="animate-fade-up delay-900 flex items-center gap-4">
-          <div className="flex-1 h-px bg-border/50" />
-          <div
-            className="w-1.5 h-1.5 rounded-full"
-            style={{ background: 'oklch(0.78 0.13 75 / 0.5)' }}
-          />
-          <div className="flex-1 h-px bg-border/50" />
         </div>
-
-        {/* Experiência */}
-        <ExperienceSection />
 
         {/* Rodapé */}
-        <footer className="animate-fade-up delay-1000 text-center pt-10 pb-6 mt-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-            <div className="w-1 h-1 rounded-full bg-primary/40" />
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <footer className="relative z-10 animate-fade-up text-center pt-4 pb-10 px-4">
+          <div className="max-w-[420px] mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+              <div className="w-1 h-1 rounded-full bg-primary/40" />
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+            </div>
+            <p className="text-[11px] text-muted-foreground/70 tracking-wide">
+              &copy; {new Date().getFullYear()} William Teixeira &mdash; Natal, RN
+            </p>
           </div>
-          <p className="text-[11px] text-muted-foreground/70 tracking-wide">
-            &copy; {new Date().getFullYear()} William Teixeira &mdash; Natal, RN
-          </p>
         </footer>
 
-      </div>
-    </main>
+      </main>
     </IntroWrapper>
   )
 }

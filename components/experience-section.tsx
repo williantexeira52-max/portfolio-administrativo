@@ -62,17 +62,6 @@ function MapPinIcon({ className }: { className?: string }) {
   )
 }
 
-function RocketIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-    </svg>
-  )
-}
-
 export function ExperienceSection() {
   return (
     <section className="w-full space-y-5 animate-fade-up delay-900">
@@ -222,63 +211,6 @@ export function ExperienceSection() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Card de Plano de Carreira — Curitiba 2027 */}
-      <div
-        className="relative rounded-2xl px-5 py-4 overflow-hidden mt-1"
-        style={{
-          background: 'linear-gradient(135deg, oklch(0.22 0.04 264 / 0.95), oklch(0.19 0.02 264 / 0.95))',
-          border: '1px solid oklch(0.78 0.13 75 / 0.22)',
-        }}
-      >
-        {/* Orb decorativo */}
-        <div
-          className="absolute -right-6 -top-6 w-28 h-28 rounded-full pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.12) 0%, transparent 70%)',
-          }}
-        />
-
-        <div className="relative flex items-start gap-3.5">
-          {/* Ícone */}
-          <div
-            className="shrink-0 w-9 h-9 rounded-xl flex items-center justify-center mt-0.5"
-            style={{
-              background: 'oklch(0.78 0.13 75 / 0.15)',
-              border: '1px solid oklch(0.78 0.13 75 / 0.3)',
-            }}
-          >
-            <RocketIcon className="w-4 h-4" style={{ color: 'oklch(0.78 0.13 75)' } as React.CSSProperties} />
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
-              <span
-                className="text-xs font-bold tracking-wider uppercase"
-                style={{ color: 'oklch(0.78 0.13 75)' }}
-              >
-                Próximo Passo
-              </span>
-              <span
-                className="text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full"
-                style={{
-                  background: 'oklch(0.78 0.13 75 / 0.1)',
-                  color: 'oklch(0.78 0.13 75 / 0.8)',
-                  border: '1px solid oklch(0.78 0.13 75 / 0.2)',
-                }}
-              >
-                2027
-              </span>
-            </div>
-            <p className="text-sm font-semibold text-foreground leading-snug">
-              Expansão para Curitiba, PR
-            </p>
-            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Planejamento de atuação profissional em Curitiba a partir de 2027, ampliando o alcance de carreira para o mercado do Sul do Brasil.
-            </p>
-          </div>
         </div>
       </div>
 
