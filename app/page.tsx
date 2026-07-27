@@ -113,7 +113,7 @@ export default function Home() {
 
         {/* ── Orb 1: topo centro ── */}
         <div
-          className="fixed top-[-120px] left-1/2 -translate-x-1/2 w-[480px] h-[480px] rounded-full pointer-events-none"
+          className="fixed top-[-100px] sm:top-[-120px] left-1/2 -translate-x-1/2 w-[260px] h-[260px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none"
           style={{
             background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.07) 0%, transparent 65%)',
             filter: 'blur(40px)',
@@ -122,7 +122,7 @@ export default function Home() {
 
         {/* ── Orb 2: canto inferior esquerdo ── */}
         <div
-          className="fixed bottom-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full pointer-events-none"
+          className="fixed bottom-[-60px] sm:bottom-[-80px] left-[-40px] sm:left-[-60px] w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] rounded-full pointer-events-none"
           style={{
             background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.05) 0%, transparent 65%)',
             filter: 'blur(50px)',

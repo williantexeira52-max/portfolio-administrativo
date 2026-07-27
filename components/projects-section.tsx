@@ -3,6 +3,7 @@
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 import { PlaceholderBanner } from '@/components/placeholder-banner'
+import { TiltCard } from '@/components/tilt-card'
 
 function FolderIcon({ className }: { className?: string }) {
   return (
@@ -65,25 +66,27 @@ export function ProjectsSection() {
       <div className="grid sm:grid-cols-2 gap-4">
         {projects.map((project, i) => (
           <Reveal key={project.name} delay={i * 80}>
-            <div className="group h-full rounded-2xl border border-border/50 bg-card/50 overflow-hidden hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-              <PlaceholderBanner label={project.name} aspect="aspect-[16/9]" className="rounded-none border-0 border-b border-border/50" />
-              <div className="p-4 sm:p-5 space-y-2">
-                <h3 className="font-semibold text-sm text-foreground">{project.name}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 text-[10px] font-medium rounded-full border border-border/50 text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+            <TiltCard className="h-full rounded-2xl">
+              <div className="group h-full rounded-2xl border border-border/50 bg-card/50 overflow-hidden hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
+                <PlaceholderBanner label={project.name} aspect="aspect-[16/9]" className="rounded-none border-0 border-b border-border/50" />
+                <div className="p-4 sm:p-5 space-y-2">
+                  <h3 className="font-semibold text-sm text-foreground">{project.name}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 text-[10px] font-medium rounded-full border border-border/50 text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </TiltCard>
           </Reveal>
         ))}
       </div>

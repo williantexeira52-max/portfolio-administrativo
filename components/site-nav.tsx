@@ -34,12 +34,33 @@ function CloseIcon({ className }: { className?: string }) {
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [active, setActive] = useState<string>('')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.querySelector(link.href))
+      .filter((el): el is Element => !!el)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(`#${entry.target.id}`)
+          }
+        })
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+    )
+
+    sections.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -63,9 +84,17 @@ export function SiteNav() {
             <a
               key={link.href}
               href={link.href}
-              className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-primary transition-colors rounded-full"
+              className={`relative px-3 py-1.5 text-xs font-medium transition-colors rounded-full ${
+                active === link.href ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+              }`}
             >
               {link.label}
+              {active === link.href && (
+                <span
+                  className="absolute inset-x-2 -bottom-0.5 h-px"
+                  style={{ background: 'oklch(0.78 0.13 75)' }}
+                />
+              )}
             </a>
           ))}
         </div>
