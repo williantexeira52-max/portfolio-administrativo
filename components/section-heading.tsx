@@ -33,7 +33,7 @@ export function SectionHeading({
         )}
         {align === 'left' && <div className="flex-1 h-px bg-gradient-to-r from-primary/30 to-transparent" />}
       </div>
-      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground text-balance leading-tight">
+      <h2 className="font-serif text-xl sm:text-3xl font-bold text-foreground text-balance leading-tight">
         {title}
       </h2>
       {description && (

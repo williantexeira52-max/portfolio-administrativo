@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function ProfileCard() {
   return (
-    <div className="flex flex-col items-center gap-6 text-center">
+    <div className="flex flex-col items-center gap-5 sm:gap-6 text-center">
       {/* Avatar com anel dourado animado */}
       <div className="animate-fade-up relative">
         {/* Anel cónico girando devagar */}
@@ -22,7 +22,7 @@ export function ProfileCard() {
           }}
         />
         {/* Foto */}
-        <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-[3px] ring-background">
+        <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-[3px] ring-background">
           <Image
             src="/william-real.png"
             alt="Foto de perfil de William Teixeira"
@@ -43,7 +43,7 @@ export function ProfileCard() {
       {/* Nome e cargo */}
       <div className="space-y-2 mt-2">
         <h1
-          className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-foreground text-balance leading-tight animate-fade-up delay-100"
+          className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground text-balance leading-tight animate-fade-up delay-100"
           style={{ textShadow: '0 0 40px oklch(0.78 0.13 75 / 0.15)' }}
         >
           William Teixeira

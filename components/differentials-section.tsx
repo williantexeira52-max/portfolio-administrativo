@@ -25,7 +25,7 @@ export function DifferentialsSection() {
     <section id="diferenciais" className="w-full">
       <Reveal>
         <div
-          className="relative rounded-3xl p-6 sm:p-8 overflow-hidden border"
+          className="relative rounded-3xl p-5 sm:p-8 overflow-hidden border"
           style={{
             borderColor: 'oklch(0.78 0.13 75 / 0.25)',
             background:
@@ -42,7 +42,7 @@ export function DifferentialsSection() {
               Diferenciais
             </span>
           </div>
-          <h2 className="relative font-serif text-2xl sm:text-3xl font-bold text-foreground mb-5">
+          <h2 className="relative font-serif text-xl sm:text-3xl font-bold text-foreground mb-5">
             Por que trabalhar comigo?
           </h2>
           <div className="relative flex flex-wrap gap-2.5">

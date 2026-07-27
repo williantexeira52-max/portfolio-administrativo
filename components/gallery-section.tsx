@@ -81,10 +81,10 @@ export function GallerySection() {
       <Reveal delay={100}>
         <div
           ref={scrollerRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-5 px-5 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {screens.map((screen) => (
-            <div key={screen} className="snap-start shrink-0 w-[240px] sm:w-[280px]">
+            <div key={screen} className="snap-start shrink-0 w-[200px] sm:w-[280px]">
               <PlaceholderBanner label={screen} aspect="aspect-[4/3]" />
               <p className="mt-2 text-xs font-medium text-muted-foreground text-center">
                 {screen}

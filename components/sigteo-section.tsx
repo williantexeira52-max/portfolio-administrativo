@@ -46,7 +46,7 @@ export function SigteoSection() {
               'linear-gradient(160deg, oklch(0.78 0.13 75 / 0.12), transparent 40%), oklch(0.14 0.008 60)',
           }}
         >
-          <div className="rounded-[22px] p-5 sm:p-9">
+          <div className="rounded-[22px] p-4 sm:p-9">
             {/* Selo de projeto principal */}
             <div className="flex items-center gap-2 mb-5">
               <div
@@ -63,9 +63,9 @@ export function SigteoSection() {
             </div>
 
             {/* Banner grande */}
-            <PlaceholderBanner label="Banner do SIGTEO" aspect="aspect-[16/8]" className="mb-7" />
+            <PlaceholderBanner label="Banner do SIGTEO" aspect="aspect-[4/3] sm:aspect-[16/8]" className="mb-6 sm:mb-7" />
 
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground text-balance leading-tight mb-3">
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-foreground text-balance leading-tight mb-3">
               Criador do <span className="text-primary">SIGTEO</span>
             </h2>
             <p className="text-sm sm:text-[15px] text-muted-foreground/90 leading-relaxed mb-2">

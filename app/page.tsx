@@ -138,8 +138,8 @@ export default function Home() {
         />
 
         {/* ── Hero ── */}
-        <div className="relative z-10 px-5 sm:px-6 pt-24 sm:pt-32 pb-10">
-          <div className="w-full max-w-[420px] mx-auto flex flex-col gap-6 sm:gap-8">
+        <div className="relative z-10 px-4 sm:px-6 pt-20 sm:pt-32 pb-8 sm:pb-10">
+          <div className="w-full max-w-[420px] mx-auto flex flex-col gap-5 sm:gap-8">
             <ProfileCard />
             <Divider />
             <section id="contato" className="w-full space-y-3 scroll-mt-24">
@@ -159,13 +159,13 @@ export default function Home() {
         </div>
 
         {/* ── Faixa de destaque (marquee) ── */}
-        <div className="relative z-10 mb-14 sm:mb-20 animate-fade-in delay-700">
+        <div className="relative z-10 mb-10 sm:mb-16 animate-fade-in delay-700">
           <MarqueeStrip />
         </div>
 
         {/* ── Seções da landing page ── */}
-        <div className="relative z-10 px-5 sm:px-6 pb-16">
-          <div className="w-full max-w-5xl mx-auto flex flex-col gap-20 sm:gap-28">
+        <div className="relative z-10 px-4 sm:px-6 pb-12 sm:pb-16">
+          <div className="w-full max-w-5xl mx-auto flex flex-col gap-14 sm:gap-24">
             <MetricsSection />
             <SigteoSection />
             <ProjectsSection />
@@ -173,7 +173,7 @@ export default function Home() {
             <SkillsSection />
             <AchievementsSection />
 
-            <div className="max-w-[420px] mx-auto w-full flex flex-col gap-20">
+            <div className="max-w-[420px] mx-auto w-full flex flex-col gap-14 sm:gap-20">
               <Divider />
               <ExperienceSection />
             </div>
