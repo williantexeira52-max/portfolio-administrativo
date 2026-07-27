@@ -6,6 +6,8 @@ import { SiteNav } from '@/components/site-nav'
 import { ScrollProgress } from '@/components/scroll-progress'
 import { MarqueeStrip } from '@/components/marquee-strip'
 import { MobileTabBar } from '@/components/mobile-tab-bar'
+import { CustomCursor } from '@/components/custom-cursor'
+import { Magnetic } from '@/components/magnetic'
 import { SigteoSection } from '@/components/sigteo-section'
 import { ProjectsSection } from '@/components/projects-section'
 import { GallerySection } from '@/components/gallery-section'
@@ -107,6 +109,7 @@ function Divider() {
 export default function Home() {
   return (
     <IntroWrapper>
+      <CustomCursor />
       <ScrollProgress />
       <SiteNav />
       <main className="relative min-h-screen bg-background overflow-x-hidden">
@@ -150,9 +153,15 @@ export default function Home() {
                 <div className="flex-1 h-px bg-border/40" />
               </div>
               <div className="flex flex-col gap-2.5">
-                {links.map((link) => (
-                  <LinkButton key={link.href} {...link} />
-                ))}
+                {links.map((link) =>
+                  link.variant === 'primary' ? (
+                    <Magnetic key={link.href} strength={0.12}>
+                      <LinkButton {...link} />
+                    </Magnetic>
+                  ) : (
+                    <LinkButton key={link.href} {...link} />
+                  )
+                )}
               </div>
             </section>
           </div>

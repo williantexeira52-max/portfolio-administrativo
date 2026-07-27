@@ -2,6 +2,7 @@
 
 import { Reveal } from '@/components/reveal'
 import { PlaceholderBanner } from '@/components/placeholder-banner'
+import { Magnetic } from '@/components/magnetic'
 
 function CrownIcon({ className }: { className?: string }) {
   return (
@@ -132,13 +133,15 @@ export function SigteoSection() {
             </div>
 
             {/* CTA */}
-            <a
-              href="#"
-              className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[0_0_32px_oklch(0.78_0.13_75/0.4)]"
-            >
-              Ver Projeto
-              <ExternalLinkIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            <Magnetic className="inline-block">
+              <a
+                href="#"
+                className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[0_0_32px_oklch(0.78_0.13_75/0.4)]"
+              >
+                Ver Projeto
+                <ExternalLinkIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </Magnetic>
           </div>
         </div>
       </Reveal>
