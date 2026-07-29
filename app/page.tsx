@@ -71,26 +71,26 @@ function FileDownIcon({ className }: { className?: string }) {
 
 const links = [
   {
+    href: '#',
+    label: 'Baixar Currículo',
+    sublabel: 'Currículo atualizado em PDF',
+    icon: <FileDownIcon className="w-5 h-5" />,
+    variant: 'primary' as const,
+    delay: 'delay-700',
+  },
+  {
     href: 'https://www.linkedin.com/in/williamtexeira/',
     label: 'LinkedIn',
     sublabel: 'linkedin.com/in/williamtexeira',
     icon: <LinkedinIcon className="w-5 h-5" />,
-    variant: 'primary' as const,
-    delay: 'delay-700',
+    variant: 'default' as const,
+    delay: 'delay-800',
   },
   {
     href: 'https://www.instagram.com/williamteixeirac1',
     label: 'Instagram',
     sublabel: '@williamteixeirac1',
     icon: <InstagramIcon className="w-5 h-5" />,
-    variant: 'default' as const,
-    delay: 'delay-800',
-  },
-  {
-    href: '#',
-    label: 'Baixar Currículo',
-    sublabel: 'Currículo atualizado em PDF',
-    icon: <FileDownIcon className="w-5 h-5" />,
     variant: 'default' as const,
     delay: 'delay-900',
   },

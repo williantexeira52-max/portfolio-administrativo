@@ -69,36 +69,39 @@ export function SigteoSection() {
             <h2 className="font-serif text-2xl sm:text-4xl font-bold text-foreground text-balance leading-tight mb-3">
               Criador do <span className="text-primary">SIGTEO</span>
             </h2>
-            <p className="text-sm sm:text-[15px] text-muted-foreground/90 leading-relaxed mb-2">
-              Sistema Integrado de Gestão Teológica &mdash; uma plataforma completa para
-              administrar secretaria, financeiro, professores e alunos de instituições de
-              ensino teológico.
+            <p className="text-sm sm:text-[15px] text-muted-foreground/90 leading-relaxed mb-4">
+              Sistema Integrado de Gestão Teológica &mdash; criado para resolver, na prática,
+              os gargalos que eu enfrentava na coordenação escolar:
             </p>
-            <p className="text-sm leading-relaxed text-muted-foreground mb-7">
-              Idealizei, desenhei e desenvolvi o SIGTEO do zero para resolver, na prática,
-              os gargalos administrativos que eu mesmo enfrentava na coordenação escolar:
-              matrículas, controle financeiro, emissão de relatórios e comunicação entre
-              secretaria, professores e alunos em um único lugar.
-            </p>
+            <ul className="space-y-1.5 mb-7">
+              {[
+                'Matrículas e controle financeiro',
+                'Emissão de relatórios',
+                'Comunicação entre secretaria, professores e alunos',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
+                  <span className="mt-2 w-1 h-1 rounded-full shrink-0" style={{ background: 'oklch(0.78 0.13 75)' }} />
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             {/* Papel no projeto */}
             <div className="grid sm:grid-cols-2 gap-3 mb-7">
-              <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3.5">
+              <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
                 <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
                   Meu papel
                 </p>
-                <p className="text-sm text-foreground/90 leading-relaxed">
-                  Idealização, gestão de produto e desenvolvimento full-stack, do
-                  levantamento de requisitos ao deploy.
+                <p className="text-sm text-foreground/90 leading-snug">
+                  Idealização, produto e desenvolvimento &mdash; do zero ao deploy.
                 </p>
               </div>
-              <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3.5">
+              <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
                 <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
                   Impacto
                 </p>
-                <p className="text-sm text-foreground/90 leading-relaxed">
-                  Centralizou a gestão administrativa e financeira de uma instituição de
-                  ensino, reduzindo trabalho manual e retrabalho.
+                <p className="text-sm text-foreground/90 leading-snug">
+                  Centralizou a gestão administrativa e financeira da instituição.
                 </p>
               </div>
             </div>

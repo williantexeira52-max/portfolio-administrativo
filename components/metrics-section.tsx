@@ -5,7 +5,7 @@ import { CountUp } from '@/components/count-up'
 
 const metrics = [
   { value: '9+', label: 'Anos de experiência' },
-  { value: '6', label: 'Empresas' },
+  { value: '5', label: 'Empresas' },
   { value: '1', label: 'ERP desenvolvido' },
   { value: '4', label: 'Sistemas criados' },
   { value: '15+', label: 'Projetos com IA' },

@@ -17,8 +17,6 @@ function TrophyIcon({ className }: { className?: string }) {
 }
 
 const achievements = [
-  { title: '+9 anos de experiência', desc: 'Em administração, RH e Departamento Pessoal.' },
-  { title: 'Criador do SIGTEO', desc: 'Sistema próprio de gestão teológica, do zero ao deploy.' },
   { title: 'Soluções com IA', desc: 'Desenvolvimento de assistentes e automações inteligentes.' },
   { title: 'Gestão de centenas de alunos', desc: 'Secretaria escolar e coordenação administrativa.' },
   { title: 'Liderança administrativa', desc: 'Coordenação de equipes e processos internos.' },

@@ -101,7 +101,7 @@ export function SiteNav() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-border/50 text-foreground"
+          className="md:hidden w-11 h-11 flex items-center justify-center rounded-full border border-border/50 text-foreground active:bg-primary/10 transition-colors"
           aria-label="Abrir menu"
         >
           {open ? <CloseIcon className="w-4 h-4" /> : <MenuIcon className="w-4 h-4" />}

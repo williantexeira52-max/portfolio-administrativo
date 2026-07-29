@@ -4,12 +4,10 @@ import { Reveal } from '@/components/reveal'
 
 const differentials = [
   'Visão administrativa',
-  'Experiência em RH',
-  'Educação',
-  'Tecnologia',
-  'Inteligência Artificial',
-  'Gestão Escolar',
-  'Desenvolvimento de Sistemas',
+  'Formação em Educação',
+  'Tecnologia aplicada à gestão',
+  'Automação com IA',
+  'Comunicação e liderança',
 ]
 
 function StarIcon({ className }: { className?: string }) {
