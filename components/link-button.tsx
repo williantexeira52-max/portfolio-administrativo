@@ -54,7 +54,7 @@ export function LinkButton({
         style={{
           background: isPrimary
             ? 'linear-gradient(105deg, transparent 20%, oklch(1 0 0 / 0.15) 50%, transparent 80%)'
-            : 'linear-gradient(105deg, transparent 20%, oklch(0.78 0.13 75 / 0.06) 50%, transparent 80%)',
+            : 'linear-gradient(105deg, transparent 20%, oklch(0.62 0.19 258 / 0.06) 50%, transparent 80%)',
         }}
       />
 

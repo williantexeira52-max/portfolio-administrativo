@@ -37,7 +37,7 @@ export function IntroAnimation({ onComplete }: { onComplete: () => void }) {
       aria-hidden="true"
       className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
       style={{
-        background: 'oklch(0.06 0.004 60)',
+        background: 'oklch(0.05 0 0)',
         opacity: isExiting ? 0 : 1,
         transition: isExiting ? 'opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1)' : undefined,
         pointerEvents: isExiting ? 'none' : 'all',
@@ -65,7 +65,7 @@ export function IntroAnimation({ onComplete }: { onComplete: () => void }) {
         style={{
           width: 360,
           height: 360,
-          background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.09) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, oklch(0.62 0.19 258 / 0.09) 0%, transparent 70%)',
           filter: 'blur(48px)',
           opacity: isExiting ? 0 : 1,
           transition: isExiting ? 'opacity 0.5s ease' : 'opacity 0.8s ease 0.4s',
@@ -115,7 +115,7 @@ export function IntroAnimation({ onComplete }: { onComplete: () => void }) {
                 isExiting={isExiting}
                 exitDelay={80 + i * 25}
                 className="text-[0.9rem] font-sans font-light tracking-[0.55em] uppercase"
-                style={{ color: 'oklch(0.78 0.13 75)' }}
+                style={{ color: 'oklch(0.62 0.19 258)' }}
               />
             ))}
           </div>
@@ -160,7 +160,7 @@ function MonogramMark() {
         <rect
           x="2" y="2" width="68" height="68"
           rx="6"
-          stroke="oklch(0.78 0.13 75)"
+          stroke="oklch(0.62 0.19 258)"
           strokeWidth="1"
           strokeDasharray="8 4"
           strokeOpacity="0.5"
@@ -176,14 +176,14 @@ function MonogramMark() {
         <rect
           x="8" y="8" width="56" height="56"
           rx="3"
-          stroke="oklch(0.78 0.13 75 / 0.25)"
+          stroke="oklch(0.62 0.19 258 / 0.25)"
           strokeWidth="0.75"
         />
       </svg>
       {/* Iniciais */}
       <span
         className="font-serif font-bold text-xl relative z-10"
-        style={{ color: 'oklch(0.78 0.13 75)', letterSpacing: '0.05em' }}
+        style={{ color: 'oklch(0.62 0.19 258)', letterSpacing: '0.05em' }}
       >
         WT
       </span>
@@ -235,7 +235,7 @@ function Divider({ lettersDone, isExiting }: { lettersDone: boolean; isExiting: 
         style={{
           flex: 1,
           height: 1,
-          background: 'oklch(0.78 0.13 75 / 0.4)',
+          background: 'oklch(0.62 0.19 258 / 0.4)',
           transformOrigin: 'right center',
           transform: lettersDone && !isExiting ? 'scaleX(1)' : 'scaleX(0)',
           transition: lettersDone
@@ -246,7 +246,7 @@ function Divider({ lettersDone, isExiting }: { lettersDone: boolean; isExiting: 
       <div
         style={{
           width: 5, height: 5, borderRadius: '50%',
-          background: 'oklch(0.78 0.13 75)',
+          background: 'oklch(0.62 0.19 258)',
           opacity: lettersDone && !isExiting ? 1 : 0,
           transition: 'opacity 0.4s ease 0.4s',
         }}
@@ -255,7 +255,7 @@ function Divider({ lettersDone, isExiting }: { lettersDone: boolean; isExiting: 
         style={{
           flex: 1,
           height: 1,
-          background: 'oklch(0.78 0.13 75 / 0.4)',
+          background: 'oklch(0.62 0.19 258 / 0.4)',
           transformOrigin: 'left center',
           transform: lettersDone && !isExiting ? 'scaleX(1)' : 'scaleX(0)',
           transition: lettersDone
@@ -286,7 +286,7 @@ function ProgressBar({ isExiting }: { isExiting: boolean }) {
       <div
         style={{
           height: 1,
-          background: 'oklch(0.78 0.13 75 / 0.15)',
+          background: 'oklch(0.62 0.19 258 / 0.15)',
           borderRadius: 999,
           overflow: 'hidden',
         }}
@@ -294,7 +294,7 @@ function ProgressBar({ isExiting }: { isExiting: boolean }) {
         <div
           style={{
             height: '100%',
-            background: 'linear-gradient(90deg, oklch(0.78 0.13 75 / 0.6), oklch(0.78 0.13 75))',
+            background: 'linear-gradient(90deg, oklch(0.62 0.19 258 / 0.6), oklch(0.62 0.19 258))',
             borderRadius: 999,
             width,
             transition: isExiting

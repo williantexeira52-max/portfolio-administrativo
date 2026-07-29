@@ -54,8 +54,8 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
           style={{
             width: visible ? `${level}%` : '0%',
             transitionDelay: `${delay}ms`,
-            background: 'linear-gradient(90deg, oklch(0.6 0.1 75), oklch(0.78 0.13 75))',
-            boxShadow: '0 0 12px oklch(0.78 0.13 75 / 0.5)',
+            background: 'linear-gradient(90deg, oklch(0.5 0.16 258), oklch(0.62 0.19 258))',
+            boxShadow: '0 0 12px oklch(0.62 0.19 258 / 0.5)',
           }}
         />
       </div>

@@ -69,7 +69,7 @@ export function SiteNav() {
         scrolled ? 'py-2.5' : 'py-4'
       }`}
       style={{
-        background: scrolled ? 'oklch(0.09 0.004 60 / 0.85)' : 'transparent',
+        background: scrolled ? 'oklch(0.07 0 0 / 0.85)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         borderBottom: scrolled ? '1px solid oklch(1 0 0 / 0.06)' : '1px solid transparent',
       }}
@@ -92,7 +92,7 @@ export function SiteNav() {
               {active === link.href && (
                 <span
                   className="absolute inset-x-2 -bottom-0.5 h-px"
-                  style={{ background: 'oklch(0.78 0.13 75)' }}
+                  style={{ background: 'oklch(0.62 0.19 258)' }}
                 />
               )}
             </a>

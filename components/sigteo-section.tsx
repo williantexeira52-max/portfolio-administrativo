@@ -42,9 +42,9 @@ export function SigteoSection() {
         <div
           className="relative rounded-3xl overflow-hidden border p-1"
           style={{
-            borderColor: 'oklch(0.78 0.13 75 / 0.3)',
+            borderColor: 'oklch(0.62 0.19 258 / 0.3)',
             background:
-              'linear-gradient(160deg, oklch(0.78 0.13 75 / 0.12), transparent 40%), oklch(0.14 0.008 60)',
+              'linear-gradient(160deg, oklch(0.62 0.19 258 / 0.12), transparent 40%), oklch(0.14 0 0)',
           }}
         >
           <div className="rounded-[22px] p-4 sm:p-9">
@@ -53,9 +53,9 @@ export function SigteoSection() {
               <div
                 className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase"
                 style={{
-                  background: 'oklch(0.78 0.13 75 / 0.15)',
-                  color: 'oklch(0.82 0.13 78)',
-                  border: '1px solid oklch(0.78 0.13 75 / 0.35)',
+                  background: 'oklch(0.62 0.19 258 / 0.15)',
+                  color: 'oklch(0.7 0.16 258)',
+                  border: '1px solid oklch(0.62 0.19 258 / 0.35)',
                 }}
               >
                 <CrownIcon className="w-3 h-3" />
@@ -97,7 +97,7 @@ export function SigteoSection() {
                     'Comunicação entre secretaria, professores e alunos',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
-                      <span className="mt-2 w-1 h-1 rounded-full shrink-0" style={{ background: 'oklch(0.78 0.13 75)' }} />
+                      <span className="mt-2 w-1 h-1 rounded-full shrink-0" style={{ background: 'oklch(0.62 0.19 258)' }} />
                       {item}
                     </li>
                   ))}

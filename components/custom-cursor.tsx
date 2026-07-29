@@ -58,13 +58,13 @@ export function CustomCursor() {
         ref={ringRef}
         aria-hidden="true"
         className="hidden md:block fixed top-0 left-0 z-[60] w-8 h-8 -ml-4 -mt-4 rounded-full pointer-events-none"
-        style={{ border: '1px solid oklch(0.78 0.13 75 / 0.5)', opacity: 0.25 }}
+        style={{ border: '1px solid oklch(0.62 0.19 258 / 0.5)', opacity: 0.25 }}
       />
       <div
         ref={dotRef}
         aria-hidden="true"
         className="hidden md:block fixed top-0 left-0 z-[60] w-1.5 h-1.5 -ml-[3px] -mt-[3px] rounded-full pointer-events-none"
-        style={{ background: 'oklch(0.78 0.13 75)' }}
+        style={{ background: 'oklch(0.62 0.19 258)' }}
       />
     </>
   )

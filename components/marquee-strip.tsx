@@ -31,11 +31,11 @@ export function MarqueeStrip() {
       {/* Fades nas bordas */}
       <div
         className="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-20"
-        style={{ background: 'linear-gradient(to right, oklch(0.09 0.004 60), transparent)' }}
+        style={{ background: 'linear-gradient(to right, oklch(0.07 0 0), transparent)' }}
       />
       <div
         className="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-20"
-        style={{ background: 'linear-gradient(to left, oklch(0.09 0.004 60), transparent)' }}
+        style={{ background: 'linear-gradient(to left, oklch(0.07 0 0), transparent)' }}
       />
     </div>
   )

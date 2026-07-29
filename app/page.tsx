@@ -101,7 +101,7 @@ function Divider() {
   return (
     <div className="flex items-center gap-4">
       <div className="flex-1 h-px bg-border/50" />
-      <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'oklch(0.78 0.13 75 / 0.5)' }} />
+      <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'oklch(0.62 0.19 258 / 0.5)' }} />
       <div className="flex-1 h-px bg-border/50" />
     </div>
   )

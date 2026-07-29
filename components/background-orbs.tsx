@@ -42,7 +42,7 @@ export function BackgroundOrbs() {
         ref={orb1Ref}
         className="fixed top-[-100px] sm:top-[-120px] left-1/2 -translate-x-1/2 w-[260px] h-[260px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.07) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, oklch(0.62 0.19 258 / 0.07) 0%, transparent 65%)',
           filter: 'blur(40px)',
         }}
       />
@@ -50,7 +50,7 @@ export function BackgroundOrbs() {
         ref={orb2Ref}
         className="fixed bottom-[-60px] sm:bottom-[-80px] left-[-40px] sm:left-[-60px] w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.05) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, oklch(0.62 0.19 258 / 0.05) 0%, transparent 65%)',
           filter: 'blur(50px)',
         }}
       />

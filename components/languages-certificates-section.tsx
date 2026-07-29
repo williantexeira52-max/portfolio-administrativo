@@ -59,7 +59,7 @@ export function LanguagesCertificatesSection() {
                       key={i}
                       className="w-2 h-2 rounded-full"
                       style={{
-                        background: i < lang.dots ? 'oklch(0.78 0.13 75)' : 'oklch(1 0 0 / 0.12)',
+                        background: i < lang.dots ? 'oklch(0.62 0.19 258)' : 'oklch(1 0 0 / 0.12)',
                       }}
                     />
                   ))}

@@ -34,13 +34,13 @@ export function VideoSection() {
       <Reveal delay={100}>
         <div
           className="relative w-full aspect-video rounded-2xl overflow-hidden border border-dashed border-border/70 flex flex-col items-center justify-center gap-3 group cursor-pointer"
-          style={{ background: 'oklch(0.15 0.008 60)' }}
+          style={{ background: 'oklch(0.13 0 0)' }}
         >
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
             style={{
-              background: 'oklch(0.78 0.13 75 / 0.15)',
-              border: '1px solid oklch(0.78 0.13 75 / 0.4)',
+              background: 'oklch(0.62 0.19 258 / 0.15)',
+              border: '1px solid oklch(0.62 0.19 258 / 0.4)',
             }}
           >
             <PlayIcon className="w-6 h-6 text-primary ml-0.5" />

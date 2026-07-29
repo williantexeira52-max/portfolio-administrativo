@@ -10,7 +10,7 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
           className="absolute -inset-[3px] rounded-full animate-spin-slow"
           style={{
             background:
-              'conic-gradient(from 0deg, oklch(0.78 0.13 75), oklch(0.55 0.08 75 / 0.2), oklch(0.78 0.13 75 / 0.8), oklch(0.55 0.08 75 / 0.1), oklch(0.78 0.13 75))',
+              'conic-gradient(from 0deg, oklch(0.62 0.19 258), oklch(0.45 0.13 258 / 0.2), oklch(0.62 0.19 258 / 0.8), oklch(0.45 0.13 258 / 0.1), oklch(0.62 0.19 258))',
           }}
         />
         {/* Glow de fundo */}
@@ -18,7 +18,7 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
           className="absolute -inset-4 rounded-full animate-glow-pulse pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle, oklch(0.78 0.13 75 / 0.18) 0%, transparent 70%)',
+              'radial-gradient(circle, oklch(0.62 0.19 258 / 0.18) 0%, transparent 70%)',
           }}
         />
         {/* Foto */}
@@ -46,7 +46,7 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
         <div className="space-y-2 mt-2 lg:mt-0">
           <h1
             className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance leading-tight animate-fade-up delay-100"
-            style={{ textShadow: '0 0 40px oklch(0.78 0.13 75 / 0.15)' }}
+            style={{ textShadow: '0 0 40px oklch(0.62 0.19 258 / 0.15)' }}
           >
             William Teixeira
           </h1>

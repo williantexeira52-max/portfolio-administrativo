@@ -77,7 +77,7 @@ export function ExperienceSection() {
         <div
           className="flex-1 h-px"
           style={{
-            background: 'linear-gradient(to right, oklch(0.78 0.13 75 / 0.4), transparent)',
+            background: 'linear-gradient(to right, oklch(0.62 0.19 258 / 0.4), transparent)',
           }}
         />
       </div>
@@ -89,7 +89,7 @@ export function ExperienceSection() {
           className="absolute left-[15px] top-4 bottom-16 w-px pointer-events-none overflow-hidden"
           style={{
             background:
-              'linear-gradient(to bottom, oklch(0.78 0.13 75 / 0.7) 0%, oklch(0.78 0.13 75 / 0.2) 85%, transparent 100%)',
+              'linear-gradient(to bottom, oklch(0.62 0.19 258 / 0.7) 0%, oklch(0.62 0.19 258 / 0.2) 85%, transparent 100%)',
           }}
         >
           {/* Luz que percorre a linha */}
@@ -117,11 +117,11 @@ export function ExperienceSection() {
                   <div className="relative flex items-center justify-center">
                     <div
                       className="w-[30px] h-[30px] rounded-full flex items-center justify-center"
-                      style={{ background: 'oklch(0.78 0.13 75 / 0.15)', border: '1px solid oklch(0.78 0.13 75 / 0.4)' }}
+                      style={{ background: 'oklch(0.62 0.19 258 / 0.15)', border: '1px solid oklch(0.62 0.19 258 / 0.4)' }}
                     >
                       <div
                         className="w-3 h-3 rounded-full animate-dot-pulse"
-                        style={{ background: 'oklch(0.78 0.13 75)' }}
+                        style={{ background: 'oklch(0.62 0.19 258)' }}
                       />
                     </div>
                   </div>
@@ -130,7 +130,7 @@ export function ExperienceSection() {
                     className="w-[30px] h-[30px] rounded-full flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-primary/5"
                     style={{
                       border: '1px solid oklch(1 0 0 / 0.12)',
-                      background: 'oklch(0.18 0.01 264)',
+                      background: 'oklch(0.16 0 0)',
                     }}
                   >
                     <div
@@ -152,12 +152,12 @@ export function ExperienceSection() {
                   style={
                     exp.current
                       ? {
-                          background: 'oklch(0.18 0.015 75 / 0.9)',
-                          borderColor: 'oklch(0.78 0.13 75 / 0.35)',
-                          boxShadow: '0 0 0 1px oklch(0.78 0.13 75 / 0.08) inset',
+                          background: 'oklch(0.16 0 0 / 0.9)',
+                          borderColor: 'oklch(0.62 0.19 258 / 0.35)',
+                          boxShadow: '0 0 0 1px oklch(0.62 0.19 258 / 0.08) inset',
                         }
                       : {
-                          background: 'oklch(0.17 0.01 264 / 0.7)',
+                          background: 'oklch(0.15 0 0 / 0.7)',
                           borderColor: 'oklch(1 0 0 / 0.08)',
                         }
                   }
@@ -173,9 +173,9 @@ export function ExperienceSection() {
                       <span
                         className="shrink-0 text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full"
                         style={{
-                          background: 'oklch(0.78 0.13 75 / 0.18)',
-                          color: 'oklch(0.78 0.13 75)',
-                          border: '1px solid oklch(0.78 0.13 75 / 0.3)',
+                          background: 'oklch(0.62 0.19 258 / 0.18)',
+                          color: 'oklch(0.62 0.19 258)',
+                          border: '1px solid oklch(0.62 0.19 258 / 0.3)',
                         }}
                       >
                         Atual
@@ -196,7 +196,7 @@ export function ExperienceSection() {
                   <div className="flex items-center gap-3 mt-2 flex-wrap">
                     <span
                       className="text-[11px] font-semibold tabular-nums"
-                      style={{ color: exp.current ? 'oklch(0.82 0.13 78)' : 'oklch(0.7 0.012 60)' }}
+                      style={{ color: exp.current ? 'oklch(0.7 0.16 258)' : 'oklch(0.65 0 0)' }}
                     >
                       {exp.period}
                     </span>

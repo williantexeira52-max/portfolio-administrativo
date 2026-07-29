@@ -26,7 +26,7 @@ export function MetricsSection() {
               <CountUp
                 value={metric.value}
                 className="font-serif text-xl sm:text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300 inline-block"
-                style={{ textShadow: '0 0 20px oklch(0.78 0.13 75 / 0.4)' }}
+                style={{ textShadow: '0 0 20px oklch(0.62 0.19 258 / 0.4)' }}
               />
               <span className="text-[10px] font-medium text-muted-foreground/80 text-center leading-tight">
                 {metric.label}

@@ -49,7 +49,7 @@ export function MobileTabBar() {
     <nav
       className="md:hidden fixed bottom-3 left-3 right-3 z-40 rounded-2xl border flex items-stretch justify-between px-1 py-1"
       style={{
-        background: 'oklch(0.12 0.006 60 / 0.85)',
+        background: 'oklch(0.1 0 0 / 0.85)',
         backdropFilter: 'blur(16px)',
         borderColor: 'oklch(1 0 0 / 0.09)',
         boxShadow: '0 8px 32px oklch(0 0 0 / 0.4)',

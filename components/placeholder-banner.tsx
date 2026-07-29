@@ -22,7 +22,7 @@ export function PlaceholderBanner({
   return (
     <div
       className={`relative w-full ${aspect} rounded-2xl overflow-hidden flex flex-col items-center justify-center gap-2 border border-dashed border-border/70 ${className}`}
-      style={{ background: 'oklch(0.15 0.008 60)' }}
+      style={{ background: 'oklch(0.13 0 0)' }}
     >
       <div
         className="absolute inset-0 opacity-40"

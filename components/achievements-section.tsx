@@ -40,7 +40,7 @@ export function AchievementsSection() {
             <div className="flex items-start gap-3 rounded-2xl border border-border/50 bg-card/50 px-4 py-3.5 hover:border-primary/30 transition-colors duration-300">
               <span
                 className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
-                style={{ background: 'oklch(0.78 0.13 75)' }}
+                style={{ background: 'oklch(0.62 0.19 258)' }}
               />
               <div>
                 <p className="text-sm font-semibold text-foreground leading-snug">{item.title}</p>
