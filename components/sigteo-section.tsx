@@ -63,88 +63,95 @@ export function SigteoSection() {
               </div>
             </div>
 
-            {/* Banner grande */}
-            <PlaceholderBanner label="Banner do SIGTEO" aspect="aspect-[4/3] sm:aspect-[16/8]" className="mb-6 sm:mb-7" />
+            <div className="lg:grid lg:grid-cols-5 lg:gap-10">
+              {/* Coluna visual (desktop: esquerda) */}
+              <div className="lg:col-span-3 lg:order-1">
+                <PlaceholderBanner label="Banner do SIGTEO" aspect="aspect-[4/3] sm:aspect-[16/8]" className="mb-6 sm:mb-7 lg:mb-5" />
 
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-foreground text-balance leading-tight mb-3">
-              Criador do <span className="text-primary">SIGTEO</span>
-            </h2>
-            <p className="text-sm sm:text-[15px] text-muted-foreground/90 leading-relaxed mb-4">
-              Sistema Integrado de Gestão Teológica &mdash; criado para resolver, na prática,
-              os gargalos que eu enfrentava na coordenação escolar:
-            </p>
-            <ul className="space-y-1.5 mb-7">
-              {[
-                'Matrículas e controle financeiro',
-                'Emissão de relatórios',
-                'Comunicação entre secretaria, professores e alunos',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
-                  <span className="mt-2 w-1 h-1 rounded-full shrink-0" style={{ background: 'oklch(0.78 0.13 75)' }} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            {/* Papel no projeto */}
-            <div className="grid sm:grid-cols-2 gap-3 mb-7">
-              <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
-                <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
-                  Meu papel
-                </p>
-                <p className="text-sm text-foreground/90 leading-snug">
-                  Idealização, produto e desenvolvimento &mdash; do zero ao deploy.
-                </p>
+                {/* Galeria de telas */}
+                <div>
+                  <p className="text-[11px] font-bold tracking-wider uppercase text-muted-foreground/70 mb-2.5">
+                    Galeria de telas
+                  </p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {screens.map((screen) => (
+                      <PlaceholderBanner key={screen} label={screen} aspect="aspect-[4/3]" />
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
-                <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
-                  Impacto
-                </p>
-                <p className="text-sm text-foreground/90 leading-snug">
-                  Centralizou a gestão administrativa e financeira da instituição.
-                </p>
-              </div>
-            </div>
 
-            {/* Tecnologias */}
-            <div className="mb-7">
-              <p className="text-[11px] font-bold tracking-wider uppercase text-muted-foreground/70 mb-2.5">
-                Tecnologias utilizadas
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 text-xs font-medium rounded-full border border-border/60 text-foreground/80 bg-background/40 backdrop-blur-sm"
+              {/* Coluna de conteúdo (desktop: direita) */}
+              <div className="lg:col-span-2 lg:order-2 mt-6 lg:mt-0">
+                <h2 className="font-serif text-2xl sm:text-4xl lg:text-3xl font-bold text-foreground text-balance leading-tight mb-3">
+                  Criador do <span className="text-primary">SIGTEO</span>
+                </h2>
+                <p className="text-sm sm:text-[15px] text-muted-foreground/90 leading-relaxed mb-4">
+                  Sistema Integrado de Gestão Teológica &mdash; criado para resolver, na prática,
+                  os gargalos que eu enfrentava na coordenação escolar:
+                </p>
+                <ul className="space-y-1.5 mb-7">
+                  {[
+                    'Matrículas e controle financeiro',
+                    'Emissão de relatórios',
+                    'Comunicação entre secretaria, professores e alunos',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
+                      <span className="mt-2 w-1 h-1 rounded-full shrink-0" style={{ background: 'oklch(0.78 0.13 75)' }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Papel no projeto */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-3 mb-7">
+                  <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
+                    <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
+                      Meu papel
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug">
+                      Idealização, produto e desenvolvimento &mdash; do zero ao deploy.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
+                    <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
+                      Impacto
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug">
+                      Centralizou a gestão administrativa e financeira da instituição.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tecnologias */}
+                <div className="mb-7">
+                  <p className="text-[11px] font-bold tracking-wider uppercase text-muted-foreground/70 mb-2.5">
+                    Tecnologias utilizadas
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs font-medium rounded-full border border-border/60 text-foreground/80 bg-background/40 backdrop-blur-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <Magnetic className="inline-block">
+                  <a
+                    href="#"
+                    className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[0_0_32px_oklch(0.78_0.13_75/0.4)]"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    Ver Projeto
+                    <ExternalLinkIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </Magnetic>
               </div>
             </div>
-
-            {/* Galeria de telas */}
-            <div className="mb-8">
-              <p className="text-[11px] font-bold tracking-wider uppercase text-muted-foreground/70 mb-2.5">
-                Galeria de telas
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {screens.map((screen) => (
-                  <PlaceholderBanner key={screen} label={screen} aspect="aspect-[4/3]" />
-                ))}
-              </div>
-            </div>
-
-            {/* CTA */}
-            <Magnetic className="inline-block">
-              <a
-                href="#"
-                className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[0_0_32px_oklch(0.78_0.13_75/0.4)]"
-              >
-                Ver Projeto
-                <ExternalLinkIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </Magnetic>
           </div>
         </div>
       </Reveal>

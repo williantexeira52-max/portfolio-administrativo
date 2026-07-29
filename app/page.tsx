@@ -8,6 +8,7 @@ import { MarqueeStrip } from '@/components/marquee-strip'
 import { MobileTabBar } from '@/components/mobile-tab-bar'
 import { CustomCursor } from '@/components/custom-cursor'
 import { Magnetic } from '@/components/magnetic'
+import { BackgroundOrbs } from '@/components/background-orbs'
 import { SigteoSection } from '@/components/sigteo-section'
 import { ProjectsSection } from '@/components/projects-section'
 import { GallerySection } from '@/components/gallery-section'
@@ -114,23 +115,8 @@ export default function Home() {
       <SiteNav />
       <main className="relative min-h-screen bg-background overflow-x-hidden">
 
-        {/* ── Orb 1: topo centro ── */}
-        <div
-          className="fixed top-[-100px] sm:top-[-120px] left-1/2 -translate-x-1/2 w-[260px] h-[260px] sm:w-[480px] sm:h-[480px] rounded-full pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.07) 0%, transparent 65%)',
-            filter: 'blur(40px)',
-          }}
-        />
-
-        {/* ── Orb 2: canto inferior esquerdo ── */}
-        <div
-          className="fixed bottom-[-60px] sm:bottom-[-80px] left-[-40px] sm:left-[-60px] w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] rounded-full pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle, oklch(0.78 0.13 75 / 0.05) 0%, transparent 65%)',
-            filter: 'blur(50px)',
-          }}
-        />
+        {/* ── Orbs de fundo com parallax (desktop) ── */}
+        <BackgroundOrbs />
 
         {/* ── Textura noise sutil ── */}
         <div
@@ -142,28 +128,29 @@ export default function Home() {
 
         {/* ── Hero ── */}
         <div className="relative z-10 px-4 sm:px-6 pt-20 sm:pt-32 pb-8 sm:pb-10">
-          <div className="w-full max-w-[420px] mx-auto flex flex-col gap-5 sm:gap-8">
-            <ProfileCard />
+          <div className="w-full max-w-[420px] lg:max-w-4xl mx-auto flex flex-col gap-5 sm:gap-8">
+            <ProfileCard>
+              <section id="contato" className="w-full space-y-3 scroll-mt-24">
+                <div className="animate-fade-up delay-600 flex items-center gap-3">
+                  <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+                    Conecte-se
+                  </h2>
+                  <div className="flex-1 h-px bg-border/40" />
+                </div>
+                <div className="flex flex-col gap-2.5">
+                  {links.map((link) =>
+                    link.variant === 'primary' ? (
+                      <Magnetic key={link.href} strength={0.12}>
+                        <LinkButton {...link} />
+                      </Magnetic>
+                    ) : (
+                      <LinkButton key={link.href} {...link} />
+                    )
+                  )}
+                </div>
+              </section>
+            </ProfileCard>
             <Divider />
-            <section id="contato" className="w-full space-y-3 scroll-mt-24">
-              <div className="animate-fade-up delay-600 flex items-center gap-3">
-                <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
-                  Conecte-se
-                </h2>
-                <div className="flex-1 h-px bg-border/40" />
-              </div>
-              <div className="flex flex-col gap-2.5">
-                {links.map((link) =>
-                  link.variant === 'primary' ? (
-                    <Magnetic key={link.href} strength={0.12}>
-                      <LinkButton {...link} />
-                    </Magnetic>
-                  ) : (
-                    <LinkButton key={link.href} {...link} />
-                  )
-                )}
-              </div>
-            </section>
           </div>
         </div>
 
@@ -174,7 +161,7 @@ export default function Home() {
 
         {/* ── Seções da landing page ── */}
         <div className="relative z-10 px-4 sm:px-6 pb-12 sm:pb-16">
-          <div className="w-full max-w-5xl mx-auto flex flex-col gap-14 sm:gap-24">
+          <div className="w-full max-w-5xl lg:max-w-6xl mx-auto flex flex-col gap-14 sm:gap-24">
             <MetricsSection />
             <SigteoSection />
             <ProjectsSection />
@@ -182,7 +169,7 @@ export default function Home() {
             <SkillsSection />
             <AchievementsSection />
 
-            <div className="max-w-[420px] mx-auto w-full flex flex-col gap-14 sm:gap-20">
+            <div className="max-w-[420px] lg:max-w-2xl mx-auto w-full flex flex-col gap-14 sm:gap-20">
               <Divider />
               <ExperienceSection />
             </div>
