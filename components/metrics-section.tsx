@@ -4,7 +4,7 @@ import { Reveal } from '@/components/reveal'
 import { CountUp } from '@/components/count-up'
 
 const metrics = [
-  { value: '6+', label: 'Anos de experiência' },
+  { value: '9+', label: 'Anos de experiência' },
   { value: '15+', label: 'Projetos desenvolvidos' },
   { value: '5+', label: 'Instituições atendidas' },
   { value: '20+', label: 'Tecnologias & ferramentas' },

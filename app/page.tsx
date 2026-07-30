@@ -89,7 +89,7 @@ function MailIcon({ className }: { className?: string }) {
 
 const links = [
   {
-    href: '#',
+    href: '/curriculo-william-teixeira.pdf',
     label: 'Baixar Currículo',
     sublabel: 'Currículo atualizado em PDF',
     icon: <FileDownIcon className="w-5 h-5" />,

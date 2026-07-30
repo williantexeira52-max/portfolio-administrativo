@@ -38,7 +38,7 @@ function FileDownIcon({ className }: { className?: string }) {
 }
 
 const items = [
-  { href: '#contato', label: 'Currículo', icon: FileDownIcon },
+  { href: '/curriculo-william-teixeira.pdf', label: 'Currículo', icon: FileDownIcon },
   { href: '#sigteo', label: 'SIGTEO', icon: CrownIcon },
   { href: '#projetos', label: 'Projetos', icon: FolderIcon },
   { href: '#contato', label: 'Contato', icon: MailIcon },
