@@ -4,19 +4,17 @@ import { Reveal } from '@/components/reveal'
 import { CountUp } from '@/components/count-up'
 
 const metrics = [
-  { value: '9+', label: 'Anos de experiência' },
-  { value: '5', label: 'Empresas' },
-  { value: '1', label: 'ERP desenvolvido' },
-  { value: '4', label: 'Sistemas criados' },
-  { value: '15+', label: 'Projetos com IA' },
-  { value: '2', label: 'Formações' },
+  { value: '6+', label: 'Anos de experiência' },
+  { value: '15+', label: 'Projetos desenvolvidos' },
+  { value: '5+', label: 'Instituições atendidas' },
+  { value: '20+', label: 'Tecnologias & ferramentas' },
 ]
 
 export function MetricsSection() {
   return (
     <section id="metricas" className="w-full">
       <Reveal>
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
           {metrics.map((metric, i) => (
             <div
               key={metric.label}

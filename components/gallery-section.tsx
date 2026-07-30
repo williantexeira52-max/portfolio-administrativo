@@ -34,11 +34,11 @@ function ChevronRight({ className }: { className?: string }) {
 
 const screens = [
   'Dashboard',
-  'Financeiro',
+  'Gestão Acadêmica',
+  'Gestão Financeira',
   'Portal do Professor',
   'Portal do Aluno',
   'Assistente de IA',
-  'Relatórios',
 ]
 
 export function GallerySection() {

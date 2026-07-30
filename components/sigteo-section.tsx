@@ -24,16 +24,22 @@ function ExternalLinkIcon({ className }: { className?: string }) {
 }
 
 const stack = [
-  'React',
-  'Next.js',
+  'React 19',
+  'Next.js 15',
   'TypeScript',
-  'Node.js',
-  'PostgreSQL',
   'Tailwind CSS',
+  'Firebase',
+  'Supabase',
   'Google AI Studio',
+  'Gemini API',
+  'OpenAI',
+  'APIs REST',
+  'Framer Motion',
+  'Vercel',
+  'Git & GitHub',
 ]
 
-const screens = ['Dashboard', 'Financeiro', 'Portal do Professor', 'Portal do Aluno']
+const screens = ['Dashboard', 'Acadêmico', 'Financeiro', 'Portal do Aluno']
 
 export function SigteoSection() {
   return (
@@ -87,14 +93,15 @@ export function SigteoSection() {
                   Criador do <span className="text-primary">SIGTEO</span>
                 </h2>
                 <p className="text-sm sm:text-[15px] text-muted-foreground/90 leading-relaxed mb-4">
-                  Sistema Integrado de Gestão Teológica &mdash; criado para resolver, na prática,
-                  os gargalos que eu enfrentava na coordenação escolar:
+                  Sistema Integrado de Gestão Teológica &mdash; plataforma completa criada
+                  para a <span className="text-foreground font-medium">ESTEADEB</span> (Escola
+                  Teológica das Assembleias de Deus no Brasil), centralizando:
                 </p>
                 <ul className="space-y-1.5 mb-7">
                   {[
-                    'Matrículas e controle financeiro',
-                    'Emissão de relatórios',
-                    'Comunicação entre secretaria, professores e alunos',
+                    'Gestão Acadêmica e Financeira',
+                    'Portal do Professor e Portal do Aluno',
+                    'Inteligência Artificial integrada',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
                       <span className="mt-2 w-1 h-1 rounded-full shrink-0" style={{ background: 'oklch(0.62 0.19 258)' }} />
@@ -110,7 +117,8 @@ export function SigteoSection() {
                       Meu papel
                     </p>
                     <p className="text-sm text-foreground/90 leading-snug">
-                      Idealização, produto e desenvolvimento &mdash; do zero ao deploy.
+                      Liderança end-to-end: idealização, requisitos, arquitetura, UX/UI e
+                      desenvolvimento com apoio de IA generativa.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
@@ -118,7 +126,8 @@ export function SigteoSection() {
                       Impacto
                     </p>
                     <p className="text-sm text-foreground/90 leading-snug">
-                      Centralizou a gestão administrativa e financeira da instituição.
+                      Centralizou 100% dos processos acadêmicos, financeiros e
+                      administrativos, eliminando planilhas e retrabalho manual.
                     </p>
                   </div>
                 </div>

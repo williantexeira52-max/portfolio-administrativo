@@ -51,7 +51,7 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
             William Teixeira
           </h1>
           <p className="text-[11px] sm:text-xs lg:text-sm font-semibold tracking-[0.22em] sm:tracking-[0.25em] uppercase text-primary animate-fade-up delay-200">
-            Coordenador Administrativo &amp; RH
+            Supervisor Administrativo • Professor • Dev. de Soluções IA
           </p>
           <p className="text-sm text-muted-foreground flex items-center justify-center lg:justify-start gap-1.5 animate-fade-up delay-300">
             <svg
@@ -73,19 +73,18 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
 
         {/* Bio */}
         <p className="text-sm lg:text-[15px] leading-relaxed text-muted-foreground max-w-xs lg:max-w-md text-balance lg:text-pretty animate-fade-up delay-400">
-          Profissional com mais de{' '}
-          <span className="text-foreground font-semibold">9 anos de experiência</span> em
-          administração, Recursos Humanos e Departamento Pessoal. Graduando em
-          Administração pela Unifacex.
+          Transformo desafios administrativos e educacionais em soluções digitais
+          inteligentes, unindo <span className="text-foreground font-semibold">gestão, tecnologia e IA</span> para
+          otimizar processos e gerar resultados.
         </p>
 
         {/* Badges de habilidades */}
         <div className="flex flex-wrap justify-center lg:justify-start gap-2 animate-fade-up delay-500">
           {[
-            'RH & DP',
-            'Recrutamento',
-            'Folha de Pagamento',
-            'Secretaria Escolar',
+            'Gestão de RH & DP',
+            'Gestão Escolar',
+            'Criador do SIGTEO',
+            'Automação com IA',
           ].map((skill) => (
             <span
               key={skill}
