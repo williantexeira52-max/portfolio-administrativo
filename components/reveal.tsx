@@ -36,10 +36,11 @@ export function Reveal({ children, className, delay = 0, as = 'div' }: RevealPro
   return (
     <Comp
       ref={ref as any}
-      className={cn('transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]', className)}
+      className={cn('transition-all duration-[1100ms] ease-[cubic-bezier(0.19,1,0.22,1)]', className)}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(28px)',
+        transform: visible ? 'translateY(0) scale(1)' : 'translateY(24px) scale(0.985)',
+        filter: visible ? 'blur(0px)' : 'blur(6px)',
         transitionDelay: `${delay}ms`,
       }}
     >

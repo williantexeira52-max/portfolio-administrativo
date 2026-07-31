@@ -30,13 +30,14 @@ export function SectionHeading({
 
     const targets = root.querySelectorAll('[data-reveal]')
     const ctx = gsap.context(() => {
-      gsap.set(targets, { yPercent: 100, opacity: 0 })
+      gsap.set(targets, { yPercent: 100, opacity: 0, filter: 'blur(8px)' })
       gsap.to(targets, {
         yPercent: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: 0.08,
+        filter: 'blur(0px)',
+        duration: 1.1,
+        ease: 'expo.out',
+        stagger: 0.1,
         scrollTrigger: {
           trigger: root,
           start: 'top 85%',

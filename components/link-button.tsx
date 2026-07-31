@@ -42,11 +42,11 @@ export function LinkButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`animate-fade-up ${delay} group relative flex items-center gap-4 w-full px-5 py-4 rounded-2xl border overflow-hidden transition-all duration-300 ${
+      className={`animate-fade-up ${delay} group relative flex items-center gap-4 w-full px-5 py-4 rounded-2xl overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] active:scale-[0.98] ${
         isPrimary
-          ? 'bg-primary text-primary-foreground border-primary/80 hover:brightness-110 hover:shadow-[0_0_32px_oklch(0.78_0.13_75/0.35)]'
-          : 'bg-card/80 border-border/60 text-foreground hover:border-primary/40 hover:bg-accent/80 hover:shadow-[0_0_20px_oklch(0.78_0.13_75/0.08)]'
-      } backdrop-blur-sm`}
+          ? 'bg-primary text-primary-foreground border border-primary/80 hover:brightness-110 hover:shadow-[0_16px_40px_-12px_oklch(0.62_0.19_258/0.5)] hover:-translate-y-0.5'
+          : 'glass-surface glass-surface-hover text-foreground'
+      }`}
     >
       {/* Shimmer sweep no hover */}
       <div

@@ -38,7 +38,7 @@ export function TiltCard({ children, className, max = 6 }: TiltCardProps) {
       ref={ref}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
-      className={cn('transition-transform duration-300 ease-out will-change-transform', className)}
+      className={cn('transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] will-change-transform', className)}
     >
       {children}
     </div>

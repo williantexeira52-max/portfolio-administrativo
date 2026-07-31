@@ -48,7 +48,7 @@ export function LanguagesCertificatesSection() {
         <Reveal delay={80}>
           <div className="space-y-3">
             {languages.map((lang) => (
-              <div key={lang.name} className="flex items-center justify-between rounded-xl border border-border/50 bg-card/50 px-4 py-3">
+              <div key={lang.name} className="flex items-center justify-between rounded-xl glass-surface px-4 py-3">
                 <div>
                   <p className="text-sm font-medium text-foreground">{lang.name}</p>
                   <p className="text-xs text-muted-foreground">{lang.level}</p>
@@ -81,7 +81,7 @@ export function LanguagesCertificatesSection() {
         <Reveal delay={120}>
           <div className="space-y-2.5">
             {certificates.map((cert) => (
-              <div key={cert} className="flex items-center gap-3 rounded-xl border border-border/50 bg-card/50 px-4 py-3">
+              <div key={cert} className="flex items-center gap-3 rounded-xl glass-surface px-4 py-3">
                 <AwardIcon className="w-4 h-4 text-primary/70 shrink-0" />
                 <p className="text-sm text-foreground/85">{cert}</p>
               </div>

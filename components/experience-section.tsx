@@ -146,7 +146,7 @@ export function ExperienceSection() {
                 <div
                   className={`rounded-2xl px-4 py-3.5 transition-all duration-300 group-hover:-translate-y-0.5 ${
                     exp.current
-                      ? 'border group-hover:shadow-[0_8px_28px_oklch(0.78_0.13_75/0.14)]'
+                      ? 'border group-hover:shadow-[0_8px_28px_oklch(0.62_0.19_258/0.18)]'
                       : 'border group-hover:border-primary/25 group-hover:bg-card/90 group-hover:shadow-[0_8px_24px_oklch(0_0_0/0.35)]'
                   }`}
                   style={

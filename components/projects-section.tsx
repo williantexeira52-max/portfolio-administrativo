@@ -67,7 +67,7 @@ export function ProjectsSection() {
         {projects.map((project, i) => (
           <Reveal key={project.name} delay={i * 80}>
             <TiltCard className="h-full rounded-2xl">
-              <div className="group h-full rounded-2xl border border-border/50 bg-card/50 overflow-hidden hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="group h-full rounded-2xl glass-surface glass-surface-hover overflow-hidden">
                 <PlaceholderBanner label={project.name} aspect="aspect-[16/9]" className="rounded-none border-0 border-b border-border/50" />
                 <div className="p-4 sm:p-5 space-y-2">
                   <h3 className="font-semibold text-sm text-foreground">{project.name}</h3>

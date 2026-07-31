@@ -112,7 +112,7 @@ export function SigteoSection() {
 
                 {/* Papel no projeto */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-3 mb-7">
-                  <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
+                  <div className="rounded-2xl glass-surface px-4 py-3">
                     <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
                       Meu papel
                     </p>
@@ -121,7 +121,7 @@ export function SigteoSection() {
                       desenvolvimento com apoio de IA generativa.
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-border/50 bg-card/50 px-4 py-3">
+                  <div className="rounded-2xl glass-surface px-4 py-3">
                     <p className="text-[11px] font-bold tracking-wider uppercase text-primary/80 mb-1">
                       Impacto
                     </p>
@@ -153,7 +153,7 @@ export function SigteoSection() {
                 <Magnetic className="inline-block">
                   <a
                     href="#"
-                    className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[0_0_32px_oklch(0.78_0.13_75/0.4)]"
+                    className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] bg-primary text-primary-foreground hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_-14px_oklch(0.62_0.19_258/0.55)] active:scale-[0.97]"
                   >
                     Ver Projeto
                     <ExternalLinkIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

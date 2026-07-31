@@ -107,6 +107,28 @@
   }
 }
 
+@layer utilities {
+  .glass-surface {
+    background: oklch(1 0 0 / 0.035);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid oklch(1 0 0 / 0.08);
+  }
+  .glass-surface-hover {
+    transition: background 0.4s cubic-bezier(0.19, 1, 0.22, 1), border-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      box-shadow 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .glass-surface-hover:hover {
+    background: oklch(1 0 0 / 0.055);
+    border-color: oklch(0.62 0.19 258 / 0.28);
+    box-shadow: 0 24px 48px -16px oklch(0 0 0 / 0.55), 0 0 0 1px oklch(0.62 0.19 258 / 0.06) inset;
+    transform: translateY(-3px);
+  }
+  .shadow-premium {
+    box-shadow: 0 32px 64px -24px oklch(0 0 0 / 0.6), 0 8px 24px -8px oklch(0 0 0 / 0.4);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

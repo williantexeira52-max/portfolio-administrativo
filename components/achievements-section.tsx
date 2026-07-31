@@ -37,7 +37,7 @@ export function AchievementsSection() {
       <div className="grid sm:grid-cols-2 gap-3">
         {achievements.map((item, i) => (
           <Reveal key={item.title} delay={i * 70}>
-            <div className="flex items-start gap-3 rounded-2xl border border-border/50 bg-card/50 px-4 py-3.5 hover:border-primary/30 transition-colors duration-300">
+            <div className="flex items-start gap-3 rounded-2xl glass-surface glass-surface-hover px-4 py-3.5">
               <span
                 className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
                 style={{ background: 'oklch(0.62 0.19 258)' }}

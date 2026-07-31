@@ -18,7 +18,7 @@ export function MetricsSection() {
           {metrics.map((metric, i) => (
             <div
               key={metric.label}
-              className="flex flex-col items-center gap-1 bg-card/60 border border-border/50 rounded-2xl py-4 sm:py-5 px-1.5 sm:px-2 backdrop-blur-sm hover:border-primary/30 hover:bg-card/90 transition-all duration-300 group"
+              className="flex flex-col items-center gap-1 glass-surface glass-surface-hover rounded-2xl py-4 sm:py-5 px-1.5 sm:px-2 group"
               style={{ transitionDelay: `${i * 40}ms` }}
             >
               <CountUp

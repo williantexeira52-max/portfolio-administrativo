@@ -46,7 +46,7 @@ export function TestimonialsSection() {
       <div className="grid sm:grid-cols-3 gap-4">
         {testimonials.map((t, i) => (
           <Reveal key={t.name} delay={i * 90}>
-            <div className="h-full flex flex-col rounded-2xl border border-border/50 bg-card/50 p-5 hover:border-primary/30 transition-colors duration-300">
+            <div className="h-full flex flex-col rounded-2xl glass-surface glass-surface-hover p-5">
               <QuoteIcon className="w-5 h-5 text-primary/40 mb-3" />
               <p className="text-sm text-foreground/85 leading-relaxed flex-1 text-pretty">
                 &ldquo;{t.quote}&rdquo;
