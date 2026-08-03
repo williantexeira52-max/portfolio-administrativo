@@ -10,7 +10,7 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
           className="absolute -inset-[3px] rounded-full animate-spin-slow"
           style={{
             background:
-              'conic-gradient(from 0deg, oklch(0.62 0.19 258), oklch(0.45 0.13 258 / 0.2), oklch(0.62 0.19 258 / 0.8), oklch(0.45 0.13 258 / 0.1), oklch(0.62 0.19 258))',
+              'conic-gradient(from 0deg, oklch(0.75 0 0), oklch(0.4 0 0 / 0.3), oklch(0.62 0.1 258 / 0.6), oklch(0.35 0 0 / 0.15), oklch(0.75 0 0))',
           }}
         />
         {/* Glow de fundo */}
@@ -18,7 +18,7 @@ export function ProfileCard({ children }: { children?: React.ReactNode }) {
           className="absolute -inset-4 rounded-full animate-glow-pulse pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle, oklch(0.62 0.19 258 / 0.18) 0%, transparent 70%)',
+              'radial-gradient(circle, oklch(0.7 0 0 / 0.14) 0%, transparent 70%)',
           }}
         />
         {/* Foto */}

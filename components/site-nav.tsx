@@ -109,7 +109,7 @@ export function SiteNav() {
       </div>
 
       {open && (
-        <div className="md:hidden mt-2 mx-4 rounded-2xl border border-border/50 bg-card/95 backdrop-blur-sm overflow-hidden">
+        <div className="md:hidden mt-2 mx-4 rounded-2xl glass-nav overflow-hidden">
           {links.map((link) => (
             <a
               key={link.href}
