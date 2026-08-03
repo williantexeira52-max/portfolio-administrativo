@@ -7,6 +7,7 @@ import { ScrollProgress } from '@/components/scroll-progress'
 import { MarqueeStrip } from '@/components/marquee-strip'
 import { MobileTabBar } from '@/components/mobile-tab-bar'
 import { CustomCursor } from '@/components/custom-cursor'
+import { SmoothScroll } from '@/components/smooth-scroll'
 import { Magnetic } from '@/components/magnetic'
 import { BackgroundOrbs } from '@/components/background-orbs'
 import { SigteoSection } from '@/components/sigteo-section'
@@ -144,6 +145,7 @@ export default function Home() {
   return (
     <IntroWrapper>
       <CustomCursor />
+      <SmoothScroll />
       <ScrollProgress />
       <SiteNav />
       <main className="relative min-h-screen bg-background overflow-x-hidden">

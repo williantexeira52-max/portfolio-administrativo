@@ -4,6 +4,7 @@ import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 import { PlaceholderBanner } from '@/components/placeholder-banner'
 import { TiltCard } from '@/components/tilt-card'
+import { SpotlightCard } from '@/components/spotlight-card'
 
 function PenIcon({ className }: { className?: string }) {
   return (
@@ -49,7 +50,7 @@ export function BlogSection() {
         {posts.map((post, i) => (
           <Reveal key={post.title} delay={i * 90}>
             <TiltCard className="h-full rounded-2xl">
-              <a href="#" className="group block h-full rounded-2xl glass-surface glass-surface-hover overflow-hidden">
+              <SpotlightCard as="a" href="#" className="group block h-full rounded-2xl glass-surface glass-surface-hover">
                 <PlaceholderBanner label={post.tag} aspect="aspect-[16/9]" className="rounded-none border-0 border-b border-border/50" />
                 <div className="p-4 sm:p-5 space-y-2">
                   <span className="text-[10px] font-bold tracking-wider uppercase text-primary/80">
@@ -60,7 +61,7 @@ export function BlogSection() {
                   </h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{post.excerpt}</p>
                 </div>
-              </a>
+              </SpotlightCard>
             </TiltCard>
           </Reveal>
         ))}
